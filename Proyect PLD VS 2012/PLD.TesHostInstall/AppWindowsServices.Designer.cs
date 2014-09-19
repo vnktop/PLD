@@ -1,4 +1,4 @@
-﻿namespace BIM.TesHost
+﻿namespace PLD.TesHost
 {
     partial class AppWindowsServices
     {

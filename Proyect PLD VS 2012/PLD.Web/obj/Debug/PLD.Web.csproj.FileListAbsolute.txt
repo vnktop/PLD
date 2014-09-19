@@ -1,0 +1,5 @@
+C:\Users\Administrador\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Web\bin\PLD.Web.dll
+C:\Users\Administrador\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Web\bin\PLD.Web.pdb
+C:\Users\Administrador\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Web\obj\Debug\PLD.Web.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Web\obj\Debug\PLD.Web.dll
+C:\Users\Administrador\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Web\obj\Debug\PLD.Web.pdb

@@ -8,9 +8,9 @@ using System.ServiceProcess;
 using System.Text;
 
 using System.ServiceModel;
-using BIM.Services;
+using PLD.Services;
 
-namespace BIM.TesHost
+namespace PLD.TesHost
 {
     partial class AppWindowsServices : ServiceBase
     {

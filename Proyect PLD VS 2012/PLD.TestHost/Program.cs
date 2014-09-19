@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 using System.ServiceModel;
-using BIM.Services;
+using PLD.Services;
 
 namespace PLD.TestHost
 {
@@ -14,7 +14,7 @@ namespace PLD.TestHost
         {
             try
             {
-                Console.WriteLine("*************************BIM.PLD.Services Versión 0.1.0****************************");
+                Console.WriteLine("************************* PLD.Services Versión 0.1.0****************************");
                 Console.WriteLine("Iniciando servicios...");
                 Console.WriteLine();
                 using (ServiceHost host1 = new ServiceHost(typeof(ServiceDefinition)))

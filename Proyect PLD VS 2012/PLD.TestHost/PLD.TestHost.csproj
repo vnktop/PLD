@@ -50,13 +50,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BIM.Services\BIM.Services.csproj">
-      <Project>{9F02C3A5-DDE2-4DA8-A310-D33770956D09}</Project>
-      <Name>BIM.Services</Name>
-    </ProjectReference>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\PLD.Services\PLD.Services.csproj">
+      <Project>{9f02c3a5-dde2-4da8-a310-d33770956d09}</Project>
+      <Name>PLD.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

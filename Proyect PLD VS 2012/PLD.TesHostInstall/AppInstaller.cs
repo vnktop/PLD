@@ -8,7 +8,7 @@ using System.Linq;
 using System.ServiceProcess;
 
 // El espacio de nombre es TestHost, no TestHostInstall
-namespace BIM.TesHost
+namespace PLD.TesHost
 {
     [RunInstaller(true)]
     public partial class AppInstaller : System.Configuration.Install.Installer
