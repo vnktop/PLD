@@ -1,0 +1,4 @@
+C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\bin\Debug\PLD.BusinessEntities.dll
+C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\bin\Debug\PLD.BusinessEntities.pdb
+C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\obj\Debug\PLD.BusinessEntities.dll
+C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\obj\Debug\PLD.BusinessEntities.pdb

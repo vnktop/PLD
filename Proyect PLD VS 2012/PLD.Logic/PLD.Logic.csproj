@@ -41,19 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comun\Logs.cs" />
     <Compile Include="L_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PLD.BussinesEntities\PLD.BussinesEntities.csproj">
+    <ProjectReference Include="..\PLD.BussinesEntities\PLD.BusinessEntities.csproj">
       <Project>{45BD1243-70D5-412B-A107-2283E62D637F}</Project>
-      <Name>PLD.BussinesEntities</Name>
+      <Name>PLD.BusinessEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\PLD.DataAccess\PLD.DataAccess.csproj">
       <Project>{FEFF292E-74C8-480B-8BEB-87C03AAF3D03}</Project>
       <Name>PLD.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

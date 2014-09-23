@@ -22,8 +22,18 @@ namespace PLD.TestHost
                     host1.Open();
                     Console.WriteLine("Servicio Iniciado!");
                     Console.WriteLine();
-                    Console.ReadKey();
-                    host1.Close();
+                   
+                    using (ServiceHost host2 = new ServiceHost(typeof(ComunService)))
+                    {
+                        host2.Open();
+                        Console.WriteLine("Servicio ComunService Iniciado!");
+                        Console.WriteLine();
+                        Console.ReadKey();
+
+                        host2.Close();
+                        host1.Close();
+                        
+                    }
                 }
             }
             catch (Exception ex)

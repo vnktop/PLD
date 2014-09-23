@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 BussinesEntities", "1 BussinesEntities", "{853A5489-F646-47A5-BACC-503358691348}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLD.BussinesEntities", "PLD.BussinesEntities\PLD.BussinesEntities.csproj", "{45BD1243-70D5-412B-A107-2283E62D637F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLD.BusinessEntities", "PLD.BussinesEntities\PLD.BusinessEntities.csproj", "{45BD1243-70D5-412B-A107-2283E62D637F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 DataAccess", "2 DataAccess", "{52A1DE41-8F48-4640-957A-5F8168C9B779}"
 EndProject

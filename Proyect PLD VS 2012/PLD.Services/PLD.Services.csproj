@@ -41,20 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comun\ComunService.cs" />
+    <Compile Include="Comun\Contract\IComunContract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestService\Contract\ServiceContract.cs" />
     <Compile Include="TestService\ServiceDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PLD.BussinesEntities\PLD.BussinesEntities.csproj">
+    <ProjectReference Include="..\PLD.BussinesEntities\PLD.BusinessEntities.csproj">
       <Project>{45bd1243-70d5-412b-a107-2283e62d637f}</Project>
-      <Name>PLD.BussinesEntities</Name>
+      <Name>PLD.BusinessEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\PLD.Logic\PLD.Logic.csproj">
       <Project>{fda365f3-c55e-49fc-a213-4dc443fec389}</Project>
       <Name>PLD.Logic</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
