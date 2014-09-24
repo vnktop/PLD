@@ -16,3 +16,12 @@ C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\bin\Debug\PLD.
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\obj\Debug\PLD.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\obj\Debug\PLD.Logic.dll
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\obj\Debug\PLD.Logic.pdb
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\bin\Debug\PLD.Logic.dll
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\bin\Debug\PLD.Logic.pdb
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\bin\Debug\PLD.BusinessEntities.dll
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\bin\Debug\PLD.DataAccess.dll
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\bin\Debug\PLD.BusinessEntities.pdb
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\bin\Debug\PLD.DataAccess.pdb
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\obj\Debug\PLD.Logic.csprojResolveAssemblyReference.cache
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\obj\Debug\PLD.Logic.dll
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.Logic\obj\Debug\PLD.Logic.pdb
