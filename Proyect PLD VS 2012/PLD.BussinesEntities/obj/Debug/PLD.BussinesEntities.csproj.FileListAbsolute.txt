@@ -9,6 +9,5 @@ C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\obj
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\obj\Debug\PLD.BussinesEntities.csprojResolveAssemblyReference.cache
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\bin\Debug\PLD.BusinessEntities.dll
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\bin\Debug\PLD.BusinessEntities.pdb
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\obj\Debug\PLD.BussinesEntities.csprojResolveAssemblyReference.cache
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\obj\Debug\PLD.BusinessEntities.dll
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.BussinesEntities\obj\Debug\PLD.BusinessEntities.pdb

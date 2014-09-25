@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="master" Class="ContextTestDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=VOSTRO;Initial Catalog=master;Integrated Security=True" SettingsObjectName="PLD.DataAccess.Properties.Settings" SettingsPropertyName="CS_Test" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=dbSmartPLD;User ID=sa" SettingsObjectName="PLD.DataAccess.Properties.Settings" SettingsPropertyName="dbSmartPLDConnectionString" Provider="System.Data.SqlClient" />
   <Function Name="dbo.stp_ListarTest" Method="stp_ListarTest">
     <ElementType Name="stp_ListarTestResult">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />

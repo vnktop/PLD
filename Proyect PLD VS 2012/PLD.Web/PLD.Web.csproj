@@ -67,6 +67,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Images\Alerta.png" />
+    <Content Include="App_Images\bg-menu-main.png" />
+    <Content Include="App_Images\boton.jpg" />
+    <Content Include="App_Images\Correcto.png" />
+    <Content Include="App_Images\Error.png" />
+    <Content Include="App_Images\exclamation.png" />
+    <Content Include="App_Themes\bootstrap-theme.min.css" />
+    <Content Include="App_Themes\bootstrap.min.css" />
+    <Content Include="App_Themes\PLDStyle.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -166,9 +175,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ComunService\" />
   </ItemGroup>

@@ -29,8 +29,9 @@ namespace PLD.DataAccess.Comun
                     tbl.vchIP = error.vchIP;
                     tbl.vchParametros = error.vchParametros;
                     tbl.vchStakeTrace = error.vchStakeTrace;
-
+                    tbl.vchHostName = error.vchHostName;
                     dc.tbl_LOG_Error.InsertOnSubmit(tbl);
+                    dc.SubmitChanges();
 
                 }
             }

@@ -11,7 +11,7 @@ namespace PLD.DataAccess
     {
         public static string ConnectionString()
         {
-            return ConfigurationManager.ConnectionStrings["dbSmartPLDConnectionString"].ConnectionString;
+            return ConfigurationManager.ConnectionStrings[1].ConnectionString;
         }
     }
 }

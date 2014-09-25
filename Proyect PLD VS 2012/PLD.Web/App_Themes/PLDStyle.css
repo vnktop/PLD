@@ -1,0 +1,229 @@
+﻿body
+{
+    font-family: Tahoma, Helvetica, sans-serif;
+    FONT-SIZE: 11px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-image: url(../../App_Images/fondopantalla.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F7F3F7;
+    scrollbar-face-color: #868F98;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-shadow-color: #2F0695;
+    scrollbar-3dlight-color: #b7b7b7;
+    scrollbar-arrow-color: #003366;
+    scrollbar-track-color: #ffffff;
+    scrollbar-darkshadow-color: #003366;
+    /* onLoad="MM_preloadImages('../../App_Images/iconos/copiarIconOver.gif','../../App_Images/iconos/pegarIconOver.gif','../../App_Images/iconos/cortarIconOver.gif','../../App_Images/iconos/notaOver.gif','../../App_Images/iconos/imprimirIconOver.gif','../../App_Images/iconos/buscarIconOver.gif','../../App_Images/iconos/ayudaIconOver.gif','../../App_Images/iconos/salirIconOver.gif','../../App_Images/iconos/guardarOver.gif','../../App_Images/iconos/validaOver.gif','../../App_Images/iconos/sumaOver.gif')"*/
+}
+
+.Tabla
+{
+    FONT-SIZE: 11px;
+    font-family: Tahoma, Helvetica, sans-serif;
+    TEXT-ALIGN: center;
+    color: #000000;
+    FONT-WEIGHT: bold;
+    background-image: url(../../App_Images/fondotabla.jpg);
+    padding: 2px;
+    background-color: #F7F3F7;
+    BORDER-RIGHT: #003366 1px solid;
+    BORDER-TOP: #003366 1px solid;
+    BORDER-LEFT: #003366 1px solid;
+    BORDER-BOTTOM: #003366 1px solid;
+    cellspacing: 2;
+}
+
+
+/*Modal Popup*/
+.modalBackground
+{
+    z-index: 1000;
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.modalPopup
+{
+    border-width: 1px;
+    border-style: solid;
+    background-color: #FFFFFF;
+    width: 600px;
+    height: auto;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 210px;
+    z-index: 999999;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.modalPopupGridView
+{
+    border-width: 1px;
+    border-style: solid;
+    background-color: #FFFFFF;
+    width: 900px;
+    height: auto;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 210px;
+    z-index: 999999;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.modalBackground_opaco
+{
+    background-color: Gray;
+    filter: alpha(opacity=100);
+    opacity: 1.0;
+}
+
+.modalPopupGridView_opaco
+{
+    border-width: 1px;
+    border-style: solid;
+    background-color: #FFFFFF;
+    width: 900px;
+    height: auto;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 210px;
+    z-index: 999999;
+    filter: alpha(opacity=100);
+    opacity: 1.0;
+}
+
+.modalPopup_opaco
+{
+    border-width: 1px;
+    border-style: solid;
+    background-color: #FFFFFF;
+    width: 600px;
+    height: auto;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 210px;
+    z-index: 999999;
+    filter: alpha(opacity=100);
+    opacity: 1.0;
+}
+
+
+
+.Titulo
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    font-style: italic;
+    COLOR: #ffffff;
+    text-align: center;
+    height: 30px;
+    font-family: Tahoma, Helvetica, sans-serif;
+    background-image: url(../../App_Images/bg-menu-main.png);
+}
+
+.Titulo2
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 16px;
+    COLOR: white;
+    font-family: Tahoma, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #006847;
+}
+
+
+/*
+    Controles
+*/
+.Boton
+{ /*utiliza*/
+    border: 1px solid #828eb6;
+    font-family: Tahoma, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: bold;
+    color: White;
+    text-shadow: White;
+    background-image: url('../../App_Images/boton.jpg');
+    background-position: left top;
+    text-align: center;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    CURSOR: hand;
+    text-transform: uppercase;
+}
+
+
+/*
+    Grid View
+*/
+.tablestyle
+{
+    /*font-family: Tahoma, Helvetica, sans-serif;*/
+    margin: 10px 0pt 15px;
+    font-size: 10pt;
+    border-color: #CDCDCD; /* Borde tabla */
+    /*width:850px;*/
+    background-color: White;
+    text-align: center;
+    color: #3D3D3D; /* Color Texto >> Contenido*/
+}
+
+.alternatingrowstyle
+{
+    background-color: #fad9d9 /*#F0F0F6*/; /* Color renglones Impares*/
+}
+
+.headerstyle
+{
+    background-color: #c63839; /* Color cabecero */
+    /*background-image: url(../../App_Images/sort_none.gif);*/
+    background-repeat: no-repeat;
+    background-position: center left;
+    color: White;
+    /*padding-left: 20px;*/
+}
+
+    .headerstyle a
+    {
+        text-decoration: none;
+        color: White; /*Black*/
+        display: block;
+    }
+
+.rowstyle
+{
+    background-color: White; /*#FFF;*/
+}
+
+    .rowstyle td, .alternatingrowstyle td
+    {
+        padding: 4px;
+    }
+
+.sortascheaderstyle
+{
+    background-image: url(../../App_Images/sort_asc.gif);
+    background-color: #8dbdd8; /* Color sombreado cabecero */
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.sortdescheaderstyle
+{
+    background-image: url(../../App_Images/sort_desc.gif);
+    background-color: #8dbdd8; /* Color sombreado cabecero */
+    background-repeat: no-repeat;
+    background-position: center left;
+}

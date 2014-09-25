@@ -33,7 +33,7 @@ namespace PLD.DataAccess.Context
     #endregion
 		
 		public ContextTestDataContext() : 
-				base(global::PLD.DataAccess.Properties.Settings.Default.CS_Test, mappingSource)
+				base(global::PLD.DataAccess.Properties.Settings.Default.dbSmartPLDConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

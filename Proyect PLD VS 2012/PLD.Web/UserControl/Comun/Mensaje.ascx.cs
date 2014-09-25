@@ -29,28 +29,7 @@ namespace PLD.UserControl.Comun
             }
             catch (Exception ex)
             {
-
-                PLD.Web.ComunService.ComunContractClient wsComun = new PLD.Web.ComunService.ComunContractClient();
-                PLD.Web.ComunService.LogError log = new PLD.Web.ComunService.LogError();
-                StackTrace st = new StackTrace(true);
-
-                string strHostName = string.Empty;
-
-                // Getting Ip address of local machine…
-                // Local machine.                
-                strHostName = Dns.GetHostName();
-
-                // Then using host name, get the IP address list..
-                IPAddress[] hostIPs = Dns.GetHostAddresses(strHostName);
-                for (int i = 0; i < hostIPs.Length; i++)
-                {
-                    log.vchIP = hostIPs[i].ToString();
-                }
-
-
-                log.vchMensaje = ex.Message;
-                log.vchUsuario = Session["User"].ToString();
-                wsComun.setLogError(log);
+                setMensajeBD(ex.Message);
             }
 
         }
@@ -113,17 +92,17 @@ namespace PLD.UserControl.Comun
                     log.vchIP = hostIPs[i].ToString();
                 }
 
-                log.vchMensaje = strMsjErr;
+                log.vchHostName = strHostName;
+                log.datFechaError = DateTime.Now;
+                log.vchMensaje = "Formulario: " + Server.HtmlEncode(Request.CurrentExecutionFilePath);
+                log.vchStakeTrace = strMsjErr;
                 log.vchUsuario = Session["User"].ToString();
                 wsComun.setLogError(log);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
                 throw;
             }
-
-
         }
 
         //protected void btnCerrarConfirmacion_Click(object sender, EventArgs e)

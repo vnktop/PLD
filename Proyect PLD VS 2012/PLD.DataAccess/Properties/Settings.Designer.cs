@@ -26,20 +26,20 @@ namespace PLD.DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=master;Integrated Security=True")]
-        public string CS_Test {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dbSmartPLD;User ID=sa;Password=Enared01")]
+        public string dbSmartPLDConnectionString {
             get {
-                return ((string)(this["CS_Test"]));
+                return ((string)(this["dbSmartPLDConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=dbSmartPLD;User ID=sa;Password=Enared01")]
-        public string dbSmartPLDConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=VOSTRO;Initial Catalog=master;Integrated Security=True")]
+        public string CS_Test {
             get {
-                return ((string)(this["dbSmartPLDConnectionString"]));
+                return ((string)(this["CS_Test"]));
             }
         }
     }

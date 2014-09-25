@@ -37,6 +37,6 @@ C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TestHost\bin\
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TestHost\bin\Debug\PLD.BusinessEntities.pdb
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TestHost\bin\Debug\PLD.Logic.pdb
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TestHost\bin\Debug\PLD.DataAccess.pdb
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TestHost\obj\x86\Debug\PLD.TestHost.csprojResolveAssemblyReference.cache
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TestHost\obj\x86\Debug\PLD.TestHost.exe
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TestHost\obj\x86\Debug\PLD.TestHost.pdb
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TestHost\obj\x86\Debug\PLD.TestHost.csprojResolveAssemblyReference.cache
