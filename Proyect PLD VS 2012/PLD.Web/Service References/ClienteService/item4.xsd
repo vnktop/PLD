@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductoResponse" nillable="true" type="tns:ProductoResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductoResponse" nillable="true" type="tns:ArrayOfProductoResponse" />
+  <xs:complexType name="ProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="decMontoInicial" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="decSaldoMensual" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="intProductoID" type="xs:int" />
+      <xs:element minOccurs="0" name="sdatFechaAlta" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="sdatFechaFin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="sintClienteID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintMonedaID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintTipoProductoID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="vchCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchCodOperador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchCodOperadorAutiliza" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchCodSucursal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchMoneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchTipoProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vhcNoCuenta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductoResponse" nillable="true" type="tns:ProductoResponse" />
+  <xs:complexType name="ArrayOfMovimietoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MovimietoResponse" nillable="true" type="tns:MovimietoResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMovimietoResponse" nillable="true" type="tns:ArrayOfMovimietoResponse" />
+  <xs:complexType name="MovimietoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="decMonto" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="dtFechaOperacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="intMovimientoID" type="xs:int" />
+      <xs:element minOccurs="0" name="intProductoID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="sintMonedaID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintTipoOperacionID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="strMoneda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNoCuenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNombreCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTipoOperacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchReferencia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MovimietoResponse" nillable="true" type="tns:MovimietoResponse" />
+  <xs:complexType name="ConsultaRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dttFechaFin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dttFechaInicio" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="shClienteID" type="xs:short" />
+      <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultaRequest" nillable="true" type="tns:ConsultaRequest" />
+  <xs:complexType name="ArrayOfInusualResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InusualResponse" nillable="true" type="tns:InusualResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInusualResponse" nillable="true" type="tns:ArrayOfInusualResponse" />
+  <xs:complexType name="InusualResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="datFechaDeteccion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="decMontoDolar" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="decMontoPesos" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="intInusualID" type="xs:int" />
+      <xs:element minOccurs="0" name="lstMovimientos" nillable="true" type="tns:ArrayOfMovimietoResponse" />
+      <xs:element minOccurs="0" name="sintTipoInusual" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="strNombreCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTipoInusual" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InusualResponse" nillable="true" type="tns:InusualResponse" />
+  <xs:complexType name="ArrayOfInusualSeguimientoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InusualSeguimientoResponse" nillable="true" type="tns:InusualSeguimientoResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInusualSeguimientoResponse" nillable="true" type="tns:ArrayOfInusualSeguimientoResponse" />
+  <xs:complexType name="InusualSeguimientoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="datFechaDeteccion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="decMontoDolar" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="decMontoPesos" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="intInusualID" type="xs:int" />
+      <xs:element minOccurs="0" name="sintEstatusSeguimientoID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintRelSeguimientoOperacionID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintTipoInusual" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="strEstatusDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTipoInusual" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InusualSeguimientoResponse" nillable="true" type="tns:InusualSeguimientoResponse" />
+  <xs:complexType name="DetalleSeguimientoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dttFecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="sintDetSeguimientoID" type="xs:short" />
+      <xs:element minOccurs="0" name="sintEstatusSeguimientoID" type="xs:short" />
+      <xs:element minOccurs="0" name="sintRelSeguimientoOperacionID" type="xs:short" />
+      <xs:element minOccurs="0" name="sintSeguimientoID" type="xs:short" />
+      <xs:element minOccurs="0" name="strDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strObservaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleSeguimientoRequest" nillable="true" type="tns:DetalleSeguimientoRequest" />
+  <xs:complexType name="DetSeguimientoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sdatFecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="sintDetSeguimientoID" type="xs:short" />
+      <xs:element minOccurs="0" name="sintEstatusSeguimientoID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintRelSeguimientoOperacionlID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="vchDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchObservaciones" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetSeguimientoResponse" nillable="true" type="tns:DetSeguimientoResponse" />
+  <xs:complexType name="ArrayOfReporteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReporteResponse" nillable="true" type="tns:ReporteResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReporteResponse" nillable="true" type="tns:ArrayOfReporteResponse" />
+  <xs:complexType name="ReporteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bitReportado" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="byReporte" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="detReporte" nillable="true" type="tns:DetReporte" />
+      <xs:element minOccurs="0" name="sdatFechaReporte" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="sintReporteID" type="xs:short" />
+      <xs:element minOccurs="0" name="sintTipoReporteID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="strTipoReporte" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReporteResponse" nillable="true" type="tns:ReporteResponse" />
+  <xs:complexType name="DetReporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sintRelSeguimientoOperacionID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintReporteID" nillable="true" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetReporte" nillable="true" type="tns:DetReporte" />
+</xs:schema>

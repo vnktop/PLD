@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1200/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Cliente" />
+  <xs:import schemaLocation="http://localhost:1200/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" />
+  <xs:import schemaLocation="http://localhost:1200/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" />
+  <xs:element name="lstClientes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Cliente" minOccurs="0" name="request" nillable="true" type="q1:ClienteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lstClientesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Cliente" minOccurs="0" name="lstClientesResult" nillable="true" type="q2:ArrayOfClienteResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatosCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shClienteID" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDatosClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Cliente" minOccurs="0" name="getDatosClienteResult" nillable="true" type="q3:DatosGralesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalificacionCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shClienteID" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalificacionClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Cliente" minOccurs="0" name="getCalificacionClienteResult" nillable="true" type="q4:CalificacionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setCalificaCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shClienteID" type="xs:short" />
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setCalificaClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" minOccurs="0" name="setCalificaClienteResult" nillable="true" type="q5:ServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalificacionClienteHistorico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shClienteID" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCalificacionClienteHistoricoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Cliente" minOccurs="0" name="getCalificacionClienteHistoricoResult" nillable="true" type="q6:ArrayOfCalificacionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductosCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sintClienteID" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductosClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="getProductosClienteResult" nillable="true" type="q7:ArrayOfProductoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMvtosProducto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sintProductoID" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMvtosProductoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="getMvtosProductoResult" nillable="true" type="q8:ArrayOfMovimietoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInusuales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="request" nillable="true" type="q9:ConsultaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInusualesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="getInusualesResult" nillable="true" type="q10:ArrayOfInusualResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDetalleInusual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intInusualID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDetalleInusualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="getDetalleInusualResult" nillable="true" type="q11:ArrayOfMovimietoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setInusualSeguimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strInusualesIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setInusualSeguimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" minOccurs="0" name="setInusualSeguimientoResult" nillable="true" type="q12:ServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInusualSeguimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="request" nillable="true" type="q13:ConsultaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getInusualSeguimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="getInusualSeguimientoResult" nillable="true" type="q14:ArrayOfInusualSeguimientoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setDetalleSeguimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="request" nillable="true" type="q15:DetalleSeguimientoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setDetalleSeguimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" minOccurs="0" name="setDetalleSeguimientoResult" nillable="true" type="q16:ServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDetalleSeguimiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sintRelSeguimientoOperacionID" type="xs:short" />
+        <xs:element minOccurs="0" name="sintEstatusSeguimientoID" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDetalleSeguimientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="getDetalleSeguimientoResult" nillable="true" type="q17:DetSeguimientoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getReportes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="request" nillable="true" type="q18:ConsultaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getReportesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="getReportesResult" nillable="true" type="q19:ArrayOfReporteResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setAgrupaReporte">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setAgrupaReporteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" minOccurs="0" name="setAgrupaReporteResult" nillable="true" type="q20:ServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setGeneraReporte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shReporteID" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setGeneraReporteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" minOccurs="0" name="setGeneraReporteResult" nillable="true" type="q21:ServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMovimientosReporte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shReporteID" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMovimientosReporteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" minOccurs="0" name="getMovimientosReporteResult" nillable="true" type="q22:ArrayOfMovimietoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

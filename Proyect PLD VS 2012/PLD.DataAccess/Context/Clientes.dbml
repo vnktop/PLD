@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbSmartPLD" Class="ClientesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=dbSmartPLD;User ID=sa" SettingsObjectName="PLD.DataAccess.Properties.Settings" SettingsPropertyName="dbSmartPLDConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.stp_getClientes" Method="stp_getClientes">
+    <Parameter Name="vchNoCliente" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="vchNombre" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="vchRFC" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="vchEstado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="vchMunicipio" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="vhcNoCuenta" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="shRiesgo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="shEstatusSeguimiento" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="stp_getClientesResult">
+      <Column Name="shClienteID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="strNoCliente" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="strRFC" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strNombre" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="shCalificacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="shRiesgo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

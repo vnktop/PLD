@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Cliente" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Cliente" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ClienteRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shRiesgo" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="shSeguimiento" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="strEstado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strMunicipio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNoCuenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strRFC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClienteRequest" nillable="true" type="tns:ClienteRequest" />
+  <xs:complexType name="ArrayOfClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClienteResponse" nillable="true" type="tns:ClienteResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClienteResponse" nillable="true" type="tns:ArrayOfClienteResponse" />
+  <xs:complexType name="ClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shCalificacion" type="xs:short" />
+      <xs:element minOccurs="0" name="shClienteID" type="xs:short" />
+      <xs:element minOccurs="0" name="shRiesgo" type="xs:short" />
+      <xs:element minOccurs="0" name="strNoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strRFC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClienteResponse" nillable="true" type="tns:ClienteResponse" />
+  <xs:complexType name="DatosGralesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dtFechaNac" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="lstDomicilio" nillable="true" type="tns:ArrayOfDomicilioResponse" />
+      <xs:element minOccurs="0" name="sinClienteID" type="xs:short" />
+      <xs:element minOccurs="0" name="sintActividadID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintNacionalidadID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintTipoPersonaID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="vchApMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchApPaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchCURP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchNoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchRFC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchRazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchTelefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatosGralesResponse" nillable="true" type="tns:DatosGralesResponse" />
+  <xs:complexType name="ArrayOfDomicilioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DomicilioResponse" nillable="true" type="tns:DomicilioResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDomicilioResponse" nillable="true" type="tns:ArrayOfDomicilioResponse" />
+  <xs:complexType name="DomicilioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shEstado" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="shLocalidad" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="strCP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strCalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNoExterior" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNoInterior" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomicilioResponse" nillable="true" type="tns:DomicilioResponse" />
+  <xs:complexType name="CalificacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dttFechaCalif" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="listaFactores" nillable="true" type="tns:ArrayOfDetCalificacion" />
+      <xs:element minOccurs="0" name="sintCalificacionID" type="xs:short" />
+      <xs:element minOccurs="0" name="sintClienteID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintPuntaje" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintRiesgoClienteID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintTipoCalificacionID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="strRiesgoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strTipoCalificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vchUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalificacionResponse" nillable="true" type="tns:CalificacionResponse" />
+  <xs:complexType name="ArrayOfDetCalificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetCalificacion" nillable="true" type="tns:DetCalificacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetCalificacion" nillable="true" type="tns:ArrayOfDetCalificacion" />
+  <xs:complexType name="DetCalificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sintFactoresID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintPuntosFactor" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="strDescripcionFactor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetCalificacion" nillable="true" type="tns:DetCalificacion" />
+  <xs:complexType name="ArrayOfCalificacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CalificacionResponse" nillable="true" type="tns:CalificacionResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCalificacionResponse" nillable="true" type="tns:ArrayOfCalificacionResponse" />
+</xs:schema>

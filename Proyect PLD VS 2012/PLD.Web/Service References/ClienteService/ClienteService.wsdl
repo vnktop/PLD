@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ClienteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IClienteContract_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1200/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1200/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1200/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Cliente" />
+      <xsd:import schemaLocation="http://localhost:1200/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" />
+      <xsd:import schemaLocation="http://localhost:1200/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Producto" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IClienteContract_lstClientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:lstClientes" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_lstClientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:lstClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getDatosCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDatosCliente" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getDatosCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDatosClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getCalificacionCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCalificacionCliente" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getCalificacionCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCalificacionClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setCalificaCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:setCalificaCliente" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setCalificaCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setCalificaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getCalificacionClienteHistorico_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCalificacionClienteHistorico" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getCalificacionClienteHistorico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCalificacionClienteHistoricoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getProductosCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductosCliente" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getProductosCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductosClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getMvtosProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMvtosProducto" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getMvtosProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMvtosProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getInusuales_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInusuales" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getInusuales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInusualesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getDetalleInusual_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDetalleInusual" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getDetalleInusual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDetalleInusualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setInusualSeguimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:setInusualSeguimiento" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setInusualSeguimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setInusualSeguimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getInusualSeguimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInusualSeguimiento" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getInusualSeguimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInusualSeguimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setDetalleSeguimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:setDetalleSeguimiento" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setDetalleSeguimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setDetalleSeguimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getDetalleSeguimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDetalleSeguimiento" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getDetalleSeguimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDetalleSeguimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getReportes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getReportes" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getReportes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getReportesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setAgrupaReporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:setAgrupaReporte" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setAgrupaReporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setAgrupaReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setGeneraReporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:setGeneraReporte" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_setGeneraReporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setGeneraReporteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getMovimientosReporte_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMovimientosReporte" />
+  </wsdl:message>
+  <wsdl:message name="IClienteContract_getMovimientosReporte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMovimientosReporteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IClienteContract">
+    <wsdl:operation name="lstClientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/lstClientes" message="tns:IClienteContract_lstClientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/lstClientesResponse" message="tns:IClienteContract_lstClientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDatosCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getDatosCliente" message="tns:IClienteContract_getDatosCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getDatosClienteResponse" message="tns:IClienteContract_getDatosCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCalificacionCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getCalificacionCliente" message="tns:IClienteContract_getCalificacionCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getCalificacionClienteResponse" message="tns:IClienteContract_getCalificacionCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setCalificaCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/setCalificaCliente" message="tns:IClienteContract_setCalificaCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/setCalificaClienteResponse" message="tns:IClienteContract_setCalificaCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCalificacionClienteHistorico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getCalificacionClienteHistorico" message="tns:IClienteContract_getCalificacionClienteHistorico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getCalificacionClienteHistoricoResponse" message="tns:IClienteContract_getCalificacionClienteHistorico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductosCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getProductosCliente" message="tns:IClienteContract_getProductosCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getProductosClienteResponse" message="tns:IClienteContract_getProductosCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMvtosProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getMvtosProducto" message="tns:IClienteContract_getMvtosProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getMvtosProductoResponse" message="tns:IClienteContract_getMvtosProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInusuales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getInusuales" message="tns:IClienteContract_getInusuales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getInusualesResponse" message="tns:IClienteContract_getInusuales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetalleInusual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getDetalleInusual" message="tns:IClienteContract_getDetalleInusual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getDetalleInusualResponse" message="tns:IClienteContract_getDetalleInusual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setInusualSeguimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/setInusualSeguimiento" message="tns:IClienteContract_setInusualSeguimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/setInusualSeguimientoResponse" message="tns:IClienteContract_setInusualSeguimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInusualSeguimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getInusualSeguimiento" message="tns:IClienteContract_getInusualSeguimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getInusualSeguimientoResponse" message="tns:IClienteContract_getInusualSeguimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setDetalleSeguimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/setDetalleSeguimiento" message="tns:IClienteContract_setDetalleSeguimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/setDetalleSeguimientoResponse" message="tns:IClienteContract_setDetalleSeguimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetalleSeguimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getDetalleSeguimiento" message="tns:IClienteContract_getDetalleSeguimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getDetalleSeguimientoResponse" message="tns:IClienteContract_getDetalleSeguimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getReportes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getReportes" message="tns:IClienteContract_getReportes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getReportesResponse" message="tns:IClienteContract_getReportes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setAgrupaReporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/setAgrupaReporte" message="tns:IClienteContract_setAgrupaReporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/setAgrupaReporteResponse" message="tns:IClienteContract_setAgrupaReporte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setGeneraReporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/setGeneraReporte" message="tns:IClienteContract_setGeneraReporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/setGeneraReporteResponse" message="tns:IClienteContract_setGeneraReporte_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMovimientosReporte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClienteContract/getMovimientosReporte" message="tns:IClienteContract_getMovimientosReporte_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClienteContract/getMovimientosReporteResponse" message="tns:IClienteContract_getMovimientosReporte_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IClienteContract" type="tns:IClienteContract">
+    <wsp:PolicyReference URI="#NetTcpBinding_IClienteContract_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="lstClientes">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/lstClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDatosCliente">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getDatosCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCalificacionCliente">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getCalificacionCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCalificaCliente">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/setCalificaCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCalificacionClienteHistorico">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getCalificacionClienteHistorico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductosCliente">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getProductosCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMvtosProducto">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getMvtosProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInusuales">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getInusuales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetalleInusual">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getDetalleInusual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setInusualSeguimiento">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/setInusualSeguimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInusualSeguimiento">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getInusualSeguimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setDetalleSeguimiento">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/setDetalleSeguimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetalleSeguimiento">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getDetalleSeguimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportes">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getReportes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setAgrupaReporte">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/setAgrupaReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setGeneraReporte">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/setGeneraReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMovimientosReporte">
+      <soap12:operation soapAction="http://tempuri.org/IClienteContract/getMovimientosReporte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClienteService">
+    <wsdl:port name="NetTcpBinding_IClienteContract" binding="tns:NetTcpBinding_IClienteContract">
+      <soap12:address location="net.tcp://localhost:1290/ClienteService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:1290/ClienteService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
