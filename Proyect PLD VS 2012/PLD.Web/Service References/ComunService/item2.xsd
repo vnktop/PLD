@@ -3,6 +3,7 @@
   <xs:import schemaLocation="http://localhost:1100/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" />
   <xs:import schemaLocation="http://localhost:1100/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" />
   <xs:import schemaLocation="http://localhost:1100/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PLD.BussinesEntities.Comun" />
+  <xs:import schemaLocation="http://localhost:1100/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Catalogo" />
   <xs:element name="setLogError">
     <xs:complexType>
       <xs:sequence>
@@ -17,7 +18,9 @@
   </xs:element>
   <xs:element name="setCargaInformacion">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="setCargaInformacionResponse">
@@ -39,6 +42,128 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PLD.BussinesEntities.Comun" minOccurs="0" name="getBitacoraCargaResult" nillable="true" type="q3:ArrayOfCarga" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setCatalogos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Catalogo" minOccurs="0" name="request" nillable="true" type="q4:ArrayOfCatalogoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setCatalogosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" minOccurs="0" name="setCatalogosResult" nillable="true" type="q5:ServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEstado">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" minOccurs="0" name="getEstadoResult" nillable="true" type="q6:ArrayOfCatalogoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLocalidad">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLocalidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" minOccurs="0" name="getLocalidadResult" nillable="true" type="q7:ArrayOfCatalogoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getActividad">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getActividadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" minOccurs="0" name="getActividadResult" nillable="true" type="q8:ArrayOfCatalogoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNacionalidad">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNacionalidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" minOccurs="0" name="getNacionalidadResult" nillable="true" type="q9:ArrayOfCatalogoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTipoPersona">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getTipoPersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" minOccurs="0" name="getTipoPersonaResult" nillable="true" type="q10:ArrayOfCatalogoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRiesgo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRiesgoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" minOccurs="0" name="getRiesgoResult" nillable="true" type="q11:ArrayOfCatalogoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEstatusSeguimientoOp">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEstatusSeguimientoOpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" minOccurs="0" name="getEstatusSeguimientoOpResult" nillable="true" type="q12:ArrayOfCatalogoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConfigInusual">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConfigInusualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" minOccurs="0" name="getConfigInusualResult" nillable="true" type="q13:ArrayOfTipoInusual" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getProductosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" minOccurs="0" name="getProductosResult" nillable="true" type="q14:ArrayOfCatalogoResponse" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbSmartPLD" Class="CatalogosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=dbSmartPLD;User ID=sa" SettingsObjectName="PLD.DataAccess.Properties.Settings" SettingsPropertyName="dbSmartPLDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_CAT_Estado" Member="tbl_CAT_Estado">
+    <Type Name="tbl_CAT_Estado">
+      <Column Name="sintEstadoID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchClave" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="tbl_CAT_Estado_tbl_CAT_Localidades" Member="tbl_CAT_Localidades" ThisKey="sintEstadoID" OtherKey="sintEstadoID" Type="tbl_CAT_Localidades" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_Actividad" Member="tbl_CAT_Actividad">
+    <Type Name="tbl_CAT_Actividad">
+      <Column Name="sintActividadID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchClave" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="sintPuntaje" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="bitEstatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_Localidades" Member="tbl_CAT_Localidades">
+    <Type Name="tbl_CAT_Localidades">
+      <Column Name="sintLocalidadID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintEstadoID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vchClave" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_CAT_Estado_tbl_CAT_Localidades" Member="tbl_CAT_Estado" ThisKey="sintEstadoID" OtherKey="sintEstadoID" Type="tbl_CAT_Estado" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_Moneda" Member="tbl_CAT_Moneda">
+    <Type Name="tbl_CAT_Moneda">
+      <Column Name="sintMonedaID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchClave" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="vchPais" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_Nacionalidad" Member="tbl_CAT_Nacionalidad">
+    <Type Name="tbl_CAT_Nacionalidad">
+      <Column Name="sintNacionalidadID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vchClave" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_TipoDomicilio" Member="tbl_CAT_TipoDomicilio">
+    <Type Name="tbl_CAT_TipoDomicilio">
+      <Column Name="sintTipoDomicilioID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchClave" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_TipoPersona" Member="tbl_CAT_TipoPersona">
+    <Type Name="tbl_CAT_TipoPersona">
+      <Column Name="sintTipoPersonaID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vchClave" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_EstuausSeguimiento" Member="tbl_CAT_EstuausSeguimiento">
+    <Type Name="tbl_CAT_EstuausSeguimiento">
+      <Column Name="sintEstatusSeguimientoID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vchObservaciones" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_TipoProducto" Member="tbl_CAT_TipoProducto">
+    <Type Name="tbl_CAT_TipoProducto">
+      <Column Name="sintTipoProductoID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchClave" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente\ClienteService.cs" />
+    <Compile Include="Cliente\Contract\IClienteContract.cs" />
     <Compile Include="Comun\ComunService.cs" />
     <Compile Include="Comun\Contract\IComunContract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

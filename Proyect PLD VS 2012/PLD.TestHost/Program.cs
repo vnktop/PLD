@@ -28,10 +28,19 @@ namespace PLD.TestHost
                         host2.Open();
                         Console.WriteLine("Servicio ComunService Iniciado!");
                         Console.WriteLine();
-                        Console.ReadKey();
+                        using (ServiceHost host3 = new ServiceHost(typeof(ClienteService)))
+                        {
+                            host3.Open();
+                            Console.WriteLine("Servicio ClienteService Iniciado!");
+                            Console.WriteLine();
 
-                        host2.Close();
-                        host1.Close();
+
+
+                            Console.ReadKey();
+                            host3.Close();
+                            host2.Close();
+                            host1.Close();
+                        }
                         
                     }
                 }

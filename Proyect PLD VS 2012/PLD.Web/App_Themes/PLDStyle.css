@@ -6,7 +6,7 @@
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
-    background-image: url(../../App_Images/fondopantalla.jpg);
+    background-image: url(../App_Images/fondopantalla.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: #F7F3F7;
@@ -17,7 +17,7 @@
     scrollbar-arrow-color: #003366;
     scrollbar-track-color: #ffffff;
     scrollbar-darkshadow-color: #003366;
-    /* onLoad="MM_preloadImages('../../App_Images/iconos/copiarIconOver.gif','../../App_Images/iconos/pegarIconOver.gif','../../App_Images/iconos/cortarIconOver.gif','../../App_Images/iconos/notaOver.gif','../../App_Images/iconos/imprimirIconOver.gif','../../App_Images/iconos/buscarIconOver.gif','../../App_Images/iconos/ayudaIconOver.gif','../../App_Images/iconos/salirIconOver.gif','../../App_Images/iconos/guardarOver.gif','../../App_Images/iconos/validaOver.gif','../../App_Images/iconos/sumaOver.gif')"*/
+    /* onLoad="MM_preloadImages('../App_Images/iconos/copiarIconOver.gif','../App_Images/iconos/pegarIconOver.gif','../App_Images/iconos/cortarIconOver.gif','../App_Images/iconos/notaOver.gif','../App_Images/iconos/imprimirIconOver.gif','../App_Images/iconos/buscarIconOver.gif','../App_Images/iconos/ayudaIconOver.gif','../App_Images/iconos/salirIconOver.gif','../App_Images/iconos/guardarOver.gif','../App_Images/iconos/validaOver.gif','../App_Images/iconos/sumaOver.gif')"*/
 }
 
 .Tabla
@@ -27,7 +27,7 @@
     TEXT-ALIGN: center;
     color: #000000;
     FONT-WEIGHT: bold;
-    background-image: url(../../App_Images/fondotabla.jpg);
+    background-image: url(../App_Images/fondotabla.jpg);
     padding: 2px;
     background-color: #F7F3F7;
     BORDER-RIGHT: #003366 1px solid;
@@ -35,6 +35,36 @@
     BORDER-LEFT: #003366 1px solid;
     BORDER-BOTTOM: #003366 1px solid;
     cellspacing: 2;
+}
+
+table.curvedEdges
+{
+    border: 2px solid Red;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    border-radius: 13px;
+}
+
+    table.curvedEdges td, table.curvedEdges th
+    {
+        border-bottom: 1px dotted black;
+        padding: 5px;
+    }
+
+.th
+{
+    background-color: #fad9d9 /*#C3C8CD*/;
+    font-weight: bold;
+    color: #000000;
+    cursor: default;
+    font-size: 11px;
+    font-weight: bold;
+    /*position:relative;
+/*text-align: center;*/
+    vertical-align: middle;
+    text-align: right;
 }
 
 
@@ -119,6 +149,26 @@
 }
 
 
+.TitBot
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    background: url(../App_Images/fondoTit.gif);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: transparent;
+    COLOR: GrayText;
+    text-transform: uppercase;
+    font-family: Tahoma, Helvetica, sans-serif;
+    BORDER-RIGHT: #2d028e 0px solid;
+    BORDER-TOP: #828EB6 0px solid;
+    BORDER-LEFT: #2d028e 0px solid;
+    BORDER-BOTTOM: #828EB6 0px solid;
+    padding-left: 35px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
 
 .Titulo
 {
@@ -129,7 +179,7 @@
     text-align: center;
     height: 30px;
     font-family: Tahoma, Helvetica, sans-serif;
-    background-image: url(../../App_Images/bg-menu-main.png);
+    background-image: url(../App_Images/bg-menu-main.png);
 }
 
 .Titulo2
@@ -154,7 +204,7 @@
     font-weight: bold;
     color: White;
     text-shadow: White;
-    background-image: url('../../App_Images/boton.jpg');
+    background-image: url('../App_Images/boton.jpg');
     background-position: left top;
     text-align: center;
     margin: 0px;
@@ -188,10 +238,11 @@
 .headerstyle
 {
     background-color: #c63839; /* Color cabecero */
-    /*background-image: url(../../App_Images/sort_none.gif);*/
+    /*background-image: url(../App_Images/sort_none.gif);*/
     background-repeat: no-repeat;
     background-position: center left;
     color: White;
+    height: 20px;
     /*padding-left: 20px;*/
 }
 
@@ -210,11 +261,17 @@
     .rowstyle td, .alternatingrowstyle td
     {
         padding: 4px;
+        height: 10px;
     }
+
+.pagerstyle
+{
+    background-color: #DBD8DB; /*#FFF;*/
+}
 
 .sortascheaderstyle
 {
-    background-image: url(../../App_Images/sort_asc.gif);
+    background-image: url(../App_Images/sort_asc.gif);
     background-color: #8dbdd8; /* Color sombreado cabecero */
     background-repeat: no-repeat;
     background-position: center left;
@@ -222,8 +279,75 @@
 
 .sortdescheaderstyle
 {
-    background-image: url(../../App_Images/sort_desc.gif);
+    background-image: url(../App_Images/sort_desc.gif);
     background-color: #8dbdd8; /* Color sombreado cabecero */
     background-repeat: no-repeat;
     background-position: center left;
+}
+
+
+.textbox
+{
+    background: #DDD url('../App_Images/txt.jpg') repeat fixed top left;
+    background-position: left top;
+}
+
+.previous{
+    background:transparent url(../App_Images/previous.png) no-repeat scroll center;
+    height:1.3em;
+    width:16px;
+}
+.next{
+    background:transparent url(../App_Images/next.png) no-repeat scroll center;
+    height:1.3em;
+    width:16px;
+}  
+.gotopage{
+    font-size:x-small;
+    width:20px;
+}
+
+.contCenter
+{
+    z-index: 99999999;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.updateProgressMessage
+{
+    z-index: 99999999;
+    font-family: Tahoma, Helvetica, sans-serif;
+    font-size:12px; 
+	z-index: 1;
+}
+.updateProgressLogin
+{
+    border-width:1px; 
+    border-style:solid; 
+    background-color:#FFFFFF; 
+    width:200px; 
+    height:35px;    
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 210px;
+    z-index: 1;
+	filter:alpha(opacity=40);
+	opacity:0.4;
+}
+.updateProgress
+{
+    border-width:1px; 
+    border-style:solid; 
+    background-color:#FFFFFF; 
+    width:200px; 
+    height:35px;    
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 210px;
+    z-index: 999999;
+	filter:alpha(opacity=70);
+	opacity:0.7;
 }

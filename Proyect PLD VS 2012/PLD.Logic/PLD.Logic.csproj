@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\Catalogo.cs" />
+    <Compile Include="Cliente\Cliente.cs" />
+    <Compile Include="Comun\Config.cs" />
     <Compile Include="Comun\Logs.cs" />
     <Compile Include="L_Test.cs" />
+    <Compile Include="Producto\Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

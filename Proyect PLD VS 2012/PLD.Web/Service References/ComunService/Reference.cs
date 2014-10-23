@@ -160,7 +160,16 @@ namespace PLD.Web.ComunService {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.Carga[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.Carga))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.CatalogoRequest[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.CatalogoRequest))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.LogError))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.CatalogoResponse[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.CatalogoResponse))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.TipoInusual[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.TipoInusual))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.DetTipoInusual[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.DetTipoInusual))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(PLD.Web.ComunService.ConfigInusual))]
     public partial class ServiceResult : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -391,6 +400,551 @@ namespace PLD.Web.ComunService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CatalogoRequest", Namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Catalogo")]
+    [System.SerializableAttribute()]
+    public partial class CatalogoRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short shPuntajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchClaveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchClaveRelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchCodigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchDescripcionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short shPuntaje {
+            get {
+                return this.shPuntajeField;
+            }
+            set {
+                if ((this.shPuntajeField.Equals(value) != true)) {
+                    this.shPuntajeField = value;
+                    this.RaisePropertyChanged("shPuntaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchClave {
+            get {
+                return this.vchClaveField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchClaveField, value) != true)) {
+                    this.vchClaveField = value;
+                    this.RaisePropertyChanged("vchClave");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchClaveRel {
+            get {
+                return this.vchClaveRelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchClaveRelField, value) != true)) {
+                    this.vchClaveRelField = value;
+                    this.RaisePropertyChanged("vchClaveRel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchCodigo {
+            get {
+                return this.vchCodigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchCodigoField, value) != true)) {
+                    this.vchCodigoField = value;
+                    this.RaisePropertyChanged("vchCodigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchDescripcion {
+            get {
+                return this.vchDescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchDescripcionField, value) != true)) {
+                    this.vchDescripcionField = value;
+                    this.RaisePropertyChanged("vchDescripcion");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CatalogoResponse", Namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun")]
+    [System.SerializableAttribute()]
+    public partial class CatalogoResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string strDescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string strIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string strDescripcion {
+            get {
+                return this.strDescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.strDescripcionField, value) != true)) {
+                    this.strDescripcionField = value;
+                    this.RaisePropertyChanged("strDescripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string strID {
+            get {
+                return this.strIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.strIDField, value) != true)) {
+                    this.strIDField = value;
+                    this.RaisePropertyChanged("strID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TipoInusual", Namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun")]
+    [System.SerializableAttribute()]
+    public partial class TipoInusual : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PLD.Web.ComunService.DetTipoInusual[] lstDetTipoInusualField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short shTipoInusualIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> shTipoTipoReporteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string strDescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string strNombreField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PLD.Web.ComunService.DetTipoInusual[] lstDetTipoInusual {
+            get {
+                return this.lstDetTipoInusualField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.lstDetTipoInusualField, value) != true)) {
+                    this.lstDetTipoInusualField = value;
+                    this.RaisePropertyChanged("lstDetTipoInusual");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short shTipoInusualID {
+            get {
+                return this.shTipoInusualIDField;
+            }
+            set {
+                if ((this.shTipoInusualIDField.Equals(value) != true)) {
+                    this.shTipoInusualIDField = value;
+                    this.RaisePropertyChanged("shTipoInusualID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> shTipoTipoReporte {
+            get {
+                return this.shTipoTipoReporteField;
+            }
+            set {
+                if ((this.shTipoTipoReporteField.Equals(value) != true)) {
+                    this.shTipoTipoReporteField = value;
+                    this.RaisePropertyChanged("shTipoTipoReporte");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string strDescripcion {
+            get {
+                return this.strDescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.strDescripcionField, value) != true)) {
+                    this.strDescripcionField = value;
+                    this.RaisePropertyChanged("strDescripcion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string strNombre {
+            get {
+                return this.strNombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.strNombreField, value) != true)) {
+                    this.strNombreField = value;
+                    this.RaisePropertyChanged("strNombre");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DetTipoInusual", Namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun")]
+    [System.SerializableAttribute()]
+    public partial class DetTipoInusual : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PLD.Web.ComunService.ConfigInusual entConfigInusualField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> sintConfigInusualIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short sintDetTipoInusualIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> sintTipoInusualIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> sintTipoProductoIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PLD.Web.ComunService.ConfigInusual entConfigInusual {
+            get {
+                return this.entConfigInusualField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.entConfigInusualField, value) != true)) {
+                    this.entConfigInusualField = value;
+                    this.RaisePropertyChanged("entConfigInusual");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> sintConfigInusualID {
+            get {
+                return this.sintConfigInusualIDField;
+            }
+            set {
+                if ((this.sintConfigInusualIDField.Equals(value) != true)) {
+                    this.sintConfigInusualIDField = value;
+                    this.RaisePropertyChanged("sintConfigInusualID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short sintDetTipoInusualID {
+            get {
+                return this.sintDetTipoInusualIDField;
+            }
+            set {
+                if ((this.sintDetTipoInusualIDField.Equals(value) != true)) {
+                    this.sintDetTipoInusualIDField = value;
+                    this.RaisePropertyChanged("sintDetTipoInusualID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> sintTipoInusualID {
+            get {
+                return this.sintTipoInusualIDField;
+            }
+            set {
+                if ((this.sintTipoInusualIDField.Equals(value) != true)) {
+                    this.sintTipoInusualIDField = value;
+                    this.RaisePropertyChanged("sintTipoInusualID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> sintTipoProductoID {
+            get {
+                return this.sintTipoProductoIDField;
+            }
+            set {
+                if ((this.sintTipoProductoIDField.Equals(value) != true)) {
+                    this.sintTipoProductoIDField = value;
+                    this.RaisePropertyChanged("sintTipoProductoID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ConfigInusual", Namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun")]
+    [System.SerializableAttribute()]
+    public partial class ConfigInusual : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> blAgrupacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> blMontosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> blSaldoMensualField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> decMontoAgrupacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> decMontoMayorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> shDiasAgrupacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<short> shPorcSaldoMensField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short sintConfigInusualIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> blAgrupacion {
+            get {
+                return this.blAgrupacionField;
+            }
+            set {
+                if ((this.blAgrupacionField.Equals(value) != true)) {
+                    this.blAgrupacionField = value;
+                    this.RaisePropertyChanged("blAgrupacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> blMontos {
+            get {
+                return this.blMontosField;
+            }
+            set {
+                if ((this.blMontosField.Equals(value) != true)) {
+                    this.blMontosField = value;
+                    this.RaisePropertyChanged("blMontos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> blSaldoMensual {
+            get {
+                return this.blSaldoMensualField;
+            }
+            set {
+                if ((this.blSaldoMensualField.Equals(value) != true)) {
+                    this.blSaldoMensualField = value;
+                    this.RaisePropertyChanged("blSaldoMensual");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> decMontoAgrupacion {
+            get {
+                return this.decMontoAgrupacionField;
+            }
+            set {
+                if ((this.decMontoAgrupacionField.Equals(value) != true)) {
+                    this.decMontoAgrupacionField = value;
+                    this.RaisePropertyChanged("decMontoAgrupacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> decMontoMayor {
+            get {
+                return this.decMontoMayorField;
+            }
+            set {
+                if ((this.decMontoMayorField.Equals(value) != true)) {
+                    this.decMontoMayorField = value;
+                    this.RaisePropertyChanged("decMontoMayor");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> shDiasAgrupacion {
+            get {
+                return this.shDiasAgrupacionField;
+            }
+            set {
+                if ((this.shDiasAgrupacionField.Equals(value) != true)) {
+                    this.shDiasAgrupacionField = value;
+                    this.RaisePropertyChanged("shDiasAgrupacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> shPorcSaldoMens {
+            get {
+                return this.shPorcSaldoMensField;
+            }
+            set {
+                if ((this.shPorcSaldoMensField.Equals(value) != true)) {
+                    this.shPorcSaldoMensField = value;
+                    this.RaisePropertyChanged("shPorcSaldoMens");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short sintConfigInusualID {
+            get {
+                return this.sintConfigInusualIDField;
+            }
+            set {
+                if ((this.sintConfigInusualIDField.Equals(value) != true)) {
+                    this.sintConfigInusualIDField = value;
+                    this.RaisePropertyChanged("sintConfigInusualID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ComunService.IComunContract")]
     public interface IComunContract {
@@ -402,16 +956,76 @@ namespace PLD.Web.ComunService {
         System.Threading.Tasks.Task setLogErrorAsync(PLD.Web.ComunService.LogError error);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/setCargaInformacion", ReplyAction="http://tempuri.org/IComunContract/setCargaInformacionResponse")]
-        PLD.Web.ComunService.ServiceResult setCargaInformacion();
+        PLD.Web.ComunService.ServiceResult setCargaInformacion(string strUsuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/setCargaInformacion", ReplyAction="http://tempuri.org/IComunContract/setCargaInformacionResponse")]
-        System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setCargaInformacionAsync();
+        System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setCargaInformacionAsync(string strUsuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getBitacoraCarga", ReplyAction="http://tempuri.org/IComunContract/getBitacoraCargaResponse")]
         PLD.Web.ComunService.Carga[] getBitacoraCarga(System.DateTime dttFechIni, System.DateTime dttFechFin);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getBitacoraCarga", ReplyAction="http://tempuri.org/IComunContract/getBitacoraCargaResponse")]
         System.Threading.Tasks.Task<PLD.Web.ComunService.Carga[]> getBitacoraCargaAsync(System.DateTime dttFechIni, System.DateTime dttFechFin);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/setCatalogos", ReplyAction="http://tempuri.org/IComunContract/setCatalogosResponse")]
+        PLD.Web.ComunService.ServiceResult setCatalogos(PLD.Web.ComunService.CatalogoRequest[] request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/setCatalogos", ReplyAction="http://tempuri.org/IComunContract/setCatalogosResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setCatalogosAsync(PLD.Web.ComunService.CatalogoRequest[] request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getEstado", ReplyAction="http://tempuri.org/IComunContract/getEstadoResponse")]
+        PLD.Web.ComunService.CatalogoResponse[] getEstado();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getEstado", ReplyAction="http://tempuri.org/IComunContract/getEstadoResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getEstadoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getLocalidad", ReplyAction="http://tempuri.org/IComunContract/getLocalidadResponse")]
+        PLD.Web.ComunService.CatalogoResponse[] getLocalidad();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getLocalidad", ReplyAction="http://tempuri.org/IComunContract/getLocalidadResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getLocalidadAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getActividad", ReplyAction="http://tempuri.org/IComunContract/getActividadResponse")]
+        PLD.Web.ComunService.CatalogoResponse[] getActividad();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getActividad", ReplyAction="http://tempuri.org/IComunContract/getActividadResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getActividadAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getNacionalidad", ReplyAction="http://tempuri.org/IComunContract/getNacionalidadResponse")]
+        PLD.Web.ComunService.CatalogoResponse[] getNacionalidad();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getNacionalidad", ReplyAction="http://tempuri.org/IComunContract/getNacionalidadResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getNacionalidadAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getTipoPersona", ReplyAction="http://tempuri.org/IComunContract/getTipoPersonaResponse")]
+        PLD.Web.ComunService.CatalogoResponse[] getTipoPersona();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getTipoPersona", ReplyAction="http://tempuri.org/IComunContract/getTipoPersonaResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getTipoPersonaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getRiesgo", ReplyAction="http://tempuri.org/IComunContract/getRiesgoResponse")]
+        PLD.Web.ComunService.CatalogoResponse[] getRiesgo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getRiesgo", ReplyAction="http://tempuri.org/IComunContract/getRiesgoResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getRiesgoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getEstatusSeguimientoOp", ReplyAction="http://tempuri.org/IComunContract/getEstatusSeguimientoOpResponse")]
+        PLD.Web.ComunService.CatalogoResponse[] getEstatusSeguimientoOp();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getEstatusSeguimientoOp", ReplyAction="http://tempuri.org/IComunContract/getEstatusSeguimientoOpResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getEstatusSeguimientoOpAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getConfigInusual", ReplyAction="http://tempuri.org/IComunContract/getConfigInusualResponse")]
+        PLD.Web.ComunService.TipoInusual[] getConfigInusual();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getConfigInusual", ReplyAction="http://tempuri.org/IComunContract/getConfigInusualResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.TipoInusual[]> getConfigInusualAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getProductos", ReplyAction="http://tempuri.org/IComunContract/getProductosResponse")]
+        PLD.Web.ComunService.CatalogoResponse[] getProductos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getProductos", ReplyAction="http://tempuri.org/IComunContract/getProductosResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getProductosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -449,12 +1063,12 @@ namespace PLD.Web.ComunService {
             return base.Channel.setLogErrorAsync(error);
         }
         
-        public PLD.Web.ComunService.ServiceResult setCargaInformacion() {
-            return base.Channel.setCargaInformacion();
+        public PLD.Web.ComunService.ServiceResult setCargaInformacion(string strUsuario) {
+            return base.Channel.setCargaInformacion(strUsuario);
         }
         
-        public System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setCargaInformacionAsync() {
-            return base.Channel.setCargaInformacionAsync();
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setCargaInformacionAsync(string strUsuario) {
+            return base.Channel.setCargaInformacionAsync(strUsuario);
         }
         
         public PLD.Web.ComunService.Carga[] getBitacoraCarga(System.DateTime dttFechIni, System.DateTime dttFechFin) {
@@ -463,6 +1077,86 @@ namespace PLD.Web.ComunService {
         
         public System.Threading.Tasks.Task<PLD.Web.ComunService.Carga[]> getBitacoraCargaAsync(System.DateTime dttFechIni, System.DateTime dttFechFin) {
             return base.Channel.getBitacoraCargaAsync(dttFechIni, dttFechFin);
+        }
+        
+        public PLD.Web.ComunService.ServiceResult setCatalogos(PLD.Web.ComunService.CatalogoRequest[] request) {
+            return base.Channel.setCatalogos(request);
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setCatalogosAsync(PLD.Web.ComunService.CatalogoRequest[] request) {
+            return base.Channel.setCatalogosAsync(request);
+        }
+        
+        public PLD.Web.ComunService.CatalogoResponse[] getEstado() {
+            return base.Channel.getEstado();
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getEstadoAsync() {
+            return base.Channel.getEstadoAsync();
+        }
+        
+        public PLD.Web.ComunService.CatalogoResponse[] getLocalidad() {
+            return base.Channel.getLocalidad();
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getLocalidadAsync() {
+            return base.Channel.getLocalidadAsync();
+        }
+        
+        public PLD.Web.ComunService.CatalogoResponse[] getActividad() {
+            return base.Channel.getActividad();
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getActividadAsync() {
+            return base.Channel.getActividadAsync();
+        }
+        
+        public PLD.Web.ComunService.CatalogoResponse[] getNacionalidad() {
+            return base.Channel.getNacionalidad();
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getNacionalidadAsync() {
+            return base.Channel.getNacionalidadAsync();
+        }
+        
+        public PLD.Web.ComunService.CatalogoResponse[] getTipoPersona() {
+            return base.Channel.getTipoPersona();
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getTipoPersonaAsync() {
+            return base.Channel.getTipoPersonaAsync();
+        }
+        
+        public PLD.Web.ComunService.CatalogoResponse[] getRiesgo() {
+            return base.Channel.getRiesgo();
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getRiesgoAsync() {
+            return base.Channel.getRiesgoAsync();
+        }
+        
+        public PLD.Web.ComunService.CatalogoResponse[] getEstatusSeguimientoOp() {
+            return base.Channel.getEstatusSeguimientoOp();
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getEstatusSeguimientoOpAsync() {
+            return base.Channel.getEstatusSeguimientoOpAsync();
+        }
+        
+        public PLD.Web.ComunService.TipoInusual[] getConfigInusual() {
+            return base.Channel.getConfigInusual();
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.TipoInusual[]> getConfigInusualAsync() {
+            return base.Channel.getConfigInusualAsync();
+        }
+        
+        public PLD.Web.ComunService.CatalogoResponse[] getProductos() {
+            return base.Channel.getProductos();
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getProductosAsync() {
+            return base.Channel.getProductosAsync();
         }
     }
 }

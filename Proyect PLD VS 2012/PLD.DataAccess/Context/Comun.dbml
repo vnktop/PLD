@@ -25,6 +25,7 @@
     </Type>
   </Table>
   <Function Name="dbo.stp_CargaInformacion" Method="stp_CargaInformacion">
+    <Parameter Name="vchUsuario" Type="System.String" DbType="VarChar(30)" />
     <Parameter Name="vchMensaje" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
     <Parameter Name="sintError" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
     <Return Type="System.Int32" />

@@ -58,7 +58,7 @@ namespace PLD.DataAccess.Comun
         }
 
 
-        public ServiceResult setCargaInformacion()
+        public ServiceResult setCargaInformacion(string strUsuario)
         {
             ServiceResult result = new ServiceResult();
             try
@@ -67,7 +67,7 @@ namespace PLD.DataAccess.Comun
                 {
                     string strMensaje = "";
                     short? shError = 0;
-                    dc.stp_CargaInformacion(ref strMensaje, ref shError);
+                    dc.stp_CargaInformacion(strUsuario, ref strMensaje, ref shError);
                     result.ServiceOk = shError == 0 ? true : false;
                     result.ErrorMessage = strMensaje;
                 }

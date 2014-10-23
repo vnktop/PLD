@@ -37,13 +37,13 @@ namespace PLD.Logic.Comun
         }
 
 
-        public ServiceResult setCargaInformacion()
+        public ServiceResult setCargaInformacion(string strUsuario)
         {
             ServiceResult result = new ServiceResult();
 
             try
             {
-                result = LogDA.setCargaInformacion();
+                result = LogDA.setCargaInformacion(strUsuario);
             }
             catch (Exception ex)
             {

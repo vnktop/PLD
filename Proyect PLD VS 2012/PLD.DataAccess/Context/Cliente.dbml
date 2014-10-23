@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbSmartPLD" Class="ClientesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=dbSmartPLD;User ID=sa" SettingsObjectName="PLD.DataAccess.Properties.Settings" SettingsPropertyName="dbSmartPLDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_MST_Cliente" Member="tbl_MST_Cliente">
+    <Type Name="tbl_MST_Cliente">
+      <Column Name="sintClienteID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintNacionalidadID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintTipoPersonaID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintActividadID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vchNoCliente" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vchNombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vchApPaterno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vchApMaterno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vchRazonSocial" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="vchRFC" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="vchCURP" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="dtFechaNac" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vchTelefono" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="dtFechaCarga" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="tbl_MST_Cliente_tbl_MST_Domicilio" Member="tbl_MST_Domicilio" ThisKey="sintClienteID" OtherKey="sintClienteID" Type="tbl_MST_Domicilio" />
+      <Association Name="tbl_MST_Cliente_tbl_MST_Calificacion" Member="tbl_MST_Calificacion" ThisKey="sintClienteID" OtherKey="sintClienteID" Type="tbl_MST_Calificacion" />
+      <Association Name="tbl_MST_Cliente_tbl_MST_Producto" Member="tbl_MST_Producto" ThisKey="sintClienteID" OtherKey="sintClienteID" Type="tbl_MST_Producto" />
+      <Association Name="tbl_MST_Cliente_tbl_REL_SeguimientoOperacion" Member="tbl_REL_SeguimientoOperacion" ThisKey="sintClienteID" OtherKey="sintClienteID" Type="tbl_REL_SeguimientoOperacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MST_Domicilio" Member="tbl_MST_Domicilio">
+    <Type Name="tbl_MST_Domicilio">
+      <Column Name="sintDomicilioID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintClienteID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintTipoDomicilioID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintLocalidadID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintEstadoID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vchCalle" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="vchNumExt" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="vchNumInt" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="vchCP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Association Name="tbl_MST_Cliente_tbl_MST_Domicilio" Member="tbl_MST_Cliente" ThisKey="sintClienteID" OtherKey="sintClienteID" Type="tbl_MST_Cliente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MST_Calificacion" Member="tbl_MST_Calificacion">
+    <Type Name="tbl_MST_Calificacion">
+      <Column Name="sintCalificacionID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintRiesgoClienteID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintClienteID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintTipoCalificacionID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintProcesoCalificacionID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintPuntaje" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="datFechaCalificacion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="vchUsuario" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="tbl_MST_Calificacion_tbl_DET_Calificacion" Member="tbl_DET_Calificacion" ThisKey="sintCalificacionID" OtherKey="sintCalificacionID" Type="tbl_DET_Calificacion" />
+      <Association Name="tbl_MST_Cliente_tbl_MST_Calificacion" Member="tbl_MST_Cliente" ThisKey="sintClienteID" OtherKey="sintClienteID" Type="tbl_MST_Cliente" IsForeignKey="true" />
+      <Association Name="tbl_CAT_TipoCalificacion_tbl_MST_Calificacion" Member="tbl_CAT_TipoCalificacion" ThisKey="sintTipoCalificacionID" OtherKey="sintTipoCalificacionID" Type="tbl_CAT_TipoCalificacion" IsForeignKey="true" />
+      <Association Name="tbl_CAT_RiesgoCliente_tbl_MST_Calificacion" Member="tbl_CAT_RiesgoCliente" ThisKey="sintRiesgoClienteID" OtherKey="sintRiesgoClienteID" Type="tbl_CAT_RiesgoCliente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DET_Calificacion" Member="tbl_DET_Calificacion">
+    <Type Name="tbl_DET_Calificacion">
+      <Column Name="sintDetCalificacion" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintFactoresID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintCalificacionID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintPuntosFactor" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="tbl_MST_Calificacion_tbl_DET_Calificacion" Member="tbl_MST_Calificacion" ThisKey="sintCalificacionID" OtherKey="sintCalificacionID" Type="tbl_MST_Calificacion" IsForeignKey="true" />
+      <Association Name="tbl_CAT_FactoresCalificacion_tbl_DET_Calificacion" Member="tbl_CAT_FactoresCalificacion" ThisKey="sintFactoresID" OtherKey="sintFactoresID" Type="tbl_CAT_FactoresCalificacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_FactoresCalificacion" Member="tbl_CAT_FactoresCalificacion">
+    <Type Name="tbl_CAT_FactoresCalificacion">
+      <Column Name="sintFactoresID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchNombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="vchFormula" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="bitActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tbl_CAT_FactoresCalificacion_tbl_DET_Calificacion" Member="tbl_DET_Calificacion" ThisKey="sintFactoresID" OtherKey="sintFactoresID" Type="tbl_DET_Calificacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_TipoCalificacion" Member="tbl_CAT_TipoCalificacion">
+    <Type Name="tbl_CAT_TipoCalificacion">
+      <Column Name="sintTipoCalificacionID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="tbl_CAT_TipoCalificacion_tbl_MST_Calificacion" Member="tbl_MST_Calificacion" ThisKey="sintTipoCalificacionID" OtherKey="sintTipoCalificacionID" Type="tbl_MST_Calificacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_RiesgoCliente" Member="tbl_CAT_RiesgoCliente">
+    <Type Name="tbl_CAT_RiesgoCliente">
+      <Column Name="sintRiesgoClienteID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="sintPuntajeIni" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintPuntajeFin" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="tbl_CAT_RiesgoCliente_tbl_MST_Calificacion" Member="tbl_MST_Calificacion" ThisKey="sintRiesgoClienteID" OtherKey="sintRiesgoClienteID" Type="tbl_MST_Calificacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MST_Producto" Member="tbl_MST_Producto">
+    <Type Name="tbl_MST_Producto">
+      <Column Name="intProductoID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintClienteID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintTipoProductoID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintMonedaID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vhcNoCuenta" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="sdatFechaAlta" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="sdatFechaFin" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vchCodSucursal" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vchCodOperador" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vchCodOperadorAutiliza" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="decMontoInicial" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="decSaldoMensual" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Association Name="tbl_MST_Producto_tbl_DET_ProductoMovimiento" Member="tbl_DET_ProductoMovimiento" ThisKey="intProductoID" OtherKey="intProductoID" Type="tbl_DET_ProductoMovimiento" />
+      <Association Name="tbl_MST_Cliente_tbl_MST_Producto" Member="tbl_MST_Cliente" ThisKey="sintClienteID" OtherKey="sintClienteID" Type="tbl_MST_Cliente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DET_Inusual" Member="tbl_DET_Inusual">
+    <Type Name="tbl_DET_Inusual">
+      <Column Name="intDetInusualID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="intInusualID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="intMovimientoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="intTipoCambioID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_DET_ProductoMovimiento_tbl_DET_Inusual" Member="tbl_DET_ProductoMovimiento" ThisKey="intMovimientoID" OtherKey="intMovimientoID" Type="tbl_DET_ProductoMovimiento" IsForeignKey="true" />
+      <Association Name="tbl_MST_Inusual_tbl_DET_Inusual" Member="tbl_MST_Inusual" ThisKey="intInusualID" OtherKey="intInusualID" Type="tbl_MST_Inusual" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DET_ProductoMovimiento" Member="tbl_DET_ProductoMovimiento">
+    <Type Name="tbl_DET_ProductoMovimiento">
+      <Column Name="intMovimientoID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="intProductoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sintTipoOperacionID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vchReferencia" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="sintMonedaID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="decMonto" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="dtFechaOperacion" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="tbl_DET_ProductoMovimiento_tbl_DET_Inusual" Member="tbl_DET_Inusual" ThisKey="intMovimientoID" OtherKey="intMovimientoID" Type="tbl_DET_Inusual" />
+      <Association Name="tbl_MST_Producto_tbl_DET_ProductoMovimiento" Member="tbl_MST_Producto" ThisKey="intProductoID" OtherKey="intProductoID" Type="tbl_MST_Producto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MST_Inusual" Member="tbl_MST_Inusual">
+    <Type Name="tbl_MST_Inusual">
+      <Column Name="intInusualID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintTipoInusual" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="decMontoPesos" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="decMontoDolar" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="datFechaDeteccion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="tbl_MST_Inusual_tbl_DET_Inusual" Member="tbl_DET_Inusual" ThisKey="intInusualID" OtherKey="intInusualID" Type="tbl_DET_Inusual" />
+      <Association Name="tbl_MST_Inusual_tbl_REL_SeguimientoOperacion" Member="tbl_REL_SeguimientoOperacion" ThisKey="intInusualID" OtherKey="intInusualID" Type="tbl_REL_SeguimientoOperacion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_REL_SeguimientoOperacion" Member="tbl_REL_SeguimientoOperacion">
+    <Type Name="tbl_REL_SeguimientoOperacion">
+      <Column Name="sintRelSeguimientoOperacionID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="intInusualID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sintClienteID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintEstatusSeguimientoID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintTipoSeguimiento" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sdatFecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vchUsuario" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="tbl_REL_SeguimientoOperacion_tbl_DET_Seguimiento" Member="tbl_DET_Seguimiento" ThisKey="sintRelSeguimientoOperacionID" OtherKey="sintRelSeguimientoOperacionlID" Type="tbl_DET_Seguimiento" />
+      <Association Name="tbl_REL_SeguimientoOperacion_tbl_DET_Reporte" Member="tbl_DET_Reporte" ThisKey="sintRelSeguimientoOperacionID" OtherKey="sintRelSeguimientoOperacionID" Type="tbl_DET_Reporte" />
+      <Association Name="tbl_MST_Cliente_tbl_REL_SeguimientoOperacion" Member="tbl_MST_Cliente" ThisKey="sintClienteID" OtherKey="sintClienteID" Type="tbl_MST_Cliente" IsForeignKey="true" />
+      <Association Name="tbl_MST_Inusual_tbl_REL_SeguimientoOperacion" Member="tbl_MST_Inusual" ThisKey="intInusualID" OtherKey="intInusualID" Type="tbl_MST_Inusual" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DET_Seguimiento" Member="tbl_DET_Seguimiento">
+    <Type Name="tbl_DET_Seguimiento">
+      <Column Name="sintDetSeguimientoID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintRelSeguimientoOperacionlID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintEstatusSeguimientoID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vchObservaciones" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="sdatFecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vchUsuario" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="tbl_REL_SeguimientoOperacion_tbl_DET_Seguimiento" Member="tbl_REL_SeguimientoOperacion" ThisKey="sintRelSeguimientoOperacionlID" OtherKey="sintRelSeguimientoOperacionID" Type="tbl_REL_SeguimientoOperacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MST_Reportes" Member="tbl_MST_Reportes">
+    <Type Name="tbl_MST_Reportes">
+      <Column Name="sintReporteID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintTipoReporteID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sdatFechaReporte" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="byReporte" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="bitReportado" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="tbl_MST_Reportes_tbl_DET_Reporte" Member="tbl_DET_Reporte" ThisKey="sintReporteID" OtherKey="sintReporteID" Type="tbl_DET_Reporte" />
+      <Association Name="tbl_CAT_TipoReporte_tbl_MST_Reportes" Member="tbl_CAT_TipoReporte" ThisKey="sintTipoReporteID" OtherKey="sintTipoReporteID" Type="tbl_CAT_TipoReporte" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DET_Reporte" Member="tbl_DET_Reporte">
+    <Type Name="tbl_DET_Reporte">
+      <Column Name="intDetReporteID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintReporteID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintRelSeguimientoOperacionID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="tbl_MST_Reportes_tbl_DET_Reporte" Member="tbl_MST_Reportes" ThisKey="sintReporteID" OtherKey="sintReporteID" Type="tbl_MST_Reportes" IsForeignKey="true" />
+      <Association Name="tbl_REL_SeguimientoOperacion_tbl_DET_Reporte" Member="tbl_REL_SeguimientoOperacion" ThisKey="sintRelSeguimientoOperacionID" OtherKey="sintRelSeguimientoOperacionID" Type="tbl_REL_SeguimientoOperacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_TipoReporte" Member="tbl_CAT_TipoReporte">
+    <Type Name="tbl_CAT_TipoReporte">
+      <Column Name="sintTipoReporteID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="vchClave" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_CAT_TipoReporte_tbl_MST_Reportes" Member="tbl_MST_Reportes" ThisKey="sintTipoReporteID" OtherKey="sintTipoReporteID" Type="tbl_MST_Reportes" />
+      <Association Name="tbl_CAT_TipoReporte_tbl_CAT_TipoInusual" Member="tbl_CAT_TipoInusual" ThisKey="sintTipoReporteID" OtherKey="sintTipoReporteID" Type="tbl_CAT_TipoInusual" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_TipoInusual" Member="tbl_CAT_TipoInusual">
+    <Type Name="tbl_CAT_TipoInusual">
+      <Column Name="sintTipoInusual" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintTipoReporteID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vchNombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vchDescripcion" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="tbl_CAT_TipoInusual_tbl_DET_TipoInisual" Member="tbl_DET_TipoInisual" ThisKey="sintTipoInusual" OtherKey="sintTipoInusual" Type="tbl_DET_TipoInisual" />
+      <Association Name="tbl_CAT_TipoReporte_tbl_CAT_TipoInusual" Member="tbl_CAT_TipoReporte" ThisKey="sintTipoReporteID" OtherKey="sintTipoReporteID" Type="tbl_CAT_TipoReporte" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DET_TipoInisual" Member="tbl_DET_TipoInisual">
+    <Type Name="tbl_DET_TipoInisual">
+      <Column Name="sintDetTipoInusualID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintTipoInusual" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintTipoProductoID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sintConfigInusualID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="tbl_CAT_TipoInusual_tbl_DET_TipoInisual" Member="tbl_CAT_TipoInusual" ThisKey="sintTipoInusual" OtherKey="sintTipoInusual" Type="tbl_CAT_TipoInusual" IsForeignKey="true" />
+      <Association Name="tbl_CAT_ConfigInusual_tbl_DET_TipoInisual" Member="tbl_CAT_ConfigInusual" ThisKey="sintConfigInusualID" OtherKey="sintConfigInusualID" Type="tbl_CAT_ConfigInusual" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_CAT_ConfigInusual" Member="tbl_CAT_ConfigInusual">
+    <Type Name="tbl_CAT_ConfigInusual">
+      <Column Name="sintConfigInusualID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sintMonedaID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="bitSaldoMensual" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="intPorcentajeSaldo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="bitMontos" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="decMontoMayor" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="bitAgrupacion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sintDiasAgrupacion" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="decMontoAgrupacion" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="bitMontoDolares" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="decMontoDolares" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Association Name="tbl_CAT_ConfigInusual_tbl_DET_TipoInisual" Member="tbl_DET_TipoInisual" ThisKey="sintConfigInusualID" OtherKey="sintConfigInusualID" Type="tbl_DET_TipoInisual" />
+    </Type>
+  </Table>
+  <Function Name="dbo.stp_CalificaCliente" Method="stp_CalificaCliente">
+    <Parameter Name="sintClienteID" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="vchUsuario" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="sintError" Type="System.Int16" DbType="SmallInt" Direction="InOut" />
+    <Parameter Name="vchRespuesta" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_getClientes" Method="stp_getClientes">
+    <Parameter Name="vchNoCliente" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="vchNombre" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="vchRFC" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="vchEstado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="vchMunicipio" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="vhcNoCuenta" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="shRiesgo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="shEstatusSeguimiento" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="stp_getClientesResult">
+      <Column Name="shClienteID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="strNoCliente" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="strRFC" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strNombre" Type="System.String" DbType="VarChar(152)" CanBeNull="true" />
+      <Column Name="shCalificacion" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="shRiesgo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_setInusualSeguimiento" Method="stp_setInusualSeguimiento">
+    <Parameter Name="vchInusualIDs" Type="System.String" DbType="VarChar(1000)" />
+    <Parameter Name="sintTipoSeguimiento" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="bitCliente" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="vchUsuario" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_getInusualAvance" Method="stp_getInusualAvance">
+    <Parameter Name="sintClienteID" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="sdatFechaIni" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="sdatFechaFin" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="stp_getInusualAvanceResult">
+      <Column Name="intInusualID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoInusual" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(152)" CanBeNull="true" />
+      <Column Name="sintTipoInusual" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="decMontoPesos" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="decMontoDolar" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="datFechaDeteccion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sintRelSeguimientoOperacionID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="sintEstatusSeguimientoID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EstatusDescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_getInusuales" Method="stp_getInusuales">
+    <Parameter Name="sintClienteID" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="sdatFechaIni" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="sdatFechaFin" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="stp_getInusualesResult">
+      <Column Name="intInusualID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vchNombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="sintTipoInusual" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="decMontoPesos" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="decMontoDolar" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="datFechaDeteccion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="vchNombreCliente" Type="System.String" DbType="VarChar(152)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stp_AgrupaReporte" Method="stp_AgrupaReporte">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.stp_getDetalleMovRpt" Method="stp_getDetalleMovRpt">
+    <Parameter Name="sintReporteID" Type="System.Int16" DbType="SmallInt" />
+    <ElementType Name="stp_getDetalleMovRptResult">
+      <Column Name="vchNombreCliente" Type="System.String" DbType="VarChar(152)" CanBeNull="true" />
+      <Column Name="vhcNoCuenta" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="intMovimientoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="intProductoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sintTipoOperacionID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vchTipoOperacion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="strTipoProducto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vchReferencia" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="sintMonedaID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="strTipoMoneda" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="decMonto" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="dtFechaOperacion" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

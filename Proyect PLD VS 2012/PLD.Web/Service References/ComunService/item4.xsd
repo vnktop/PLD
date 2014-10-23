@@ -12,4 +12,62 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="LogError" nillable="true" type="tns:LogError" />
+  <xs:complexType name="ArrayOfCatalogoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CatalogoResponse" nillable="true" type="tns:CatalogoResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCatalogoResponse" nillable="true" type="tns:ArrayOfCatalogoResponse" />
+  <xs:complexType name="CatalogoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="strDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CatalogoResponse" nillable="true" type="tns:CatalogoResponse" />
+  <xs:complexType name="ArrayOfTipoInusual">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoInusual" nillable="true" type="tns:TipoInusual" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoInusual" nillable="true" type="tns:ArrayOfTipoInusual" />
+  <xs:complexType name="TipoInusual">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lstDetTipoInusual" nillable="true" type="tns:ArrayOfDetTipoInusual" />
+      <xs:element minOccurs="0" name="shTipoInusualID" type="xs:short" />
+      <xs:element minOccurs="0" name="shTipoTipoReporte" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="strDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="strNombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoInusual" nillable="true" type="tns:TipoInusual" />
+  <xs:complexType name="ArrayOfDetTipoInusual">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetTipoInusual" nillable="true" type="tns:DetTipoInusual" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetTipoInusual" nillable="true" type="tns:ArrayOfDetTipoInusual" />
+  <xs:complexType name="DetTipoInusual">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entConfigInusual" nillable="true" type="tns:ConfigInusual" />
+      <xs:element minOccurs="0" name="sintConfigInusualID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintDetTipoInusualID" type="xs:short" />
+      <xs:element minOccurs="0" name="sintTipoInusualID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintTipoProductoID" nillable="true" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetTipoInusual" nillable="true" type="tns:DetTipoInusual" />
+  <xs:complexType name="ConfigInusual">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="blAgrupacion" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="blMontos" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="blSaldoMensual" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="decMontoAgrupacion" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="decMontoMayor" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="shDiasAgrupacion" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="shPorcSaldoMens" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="sintConfigInusualID" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigInusual" nillable="true" type="tns:ConfigInusual" />
 </xs:schema>

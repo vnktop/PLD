@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Catalogos">
+  <DataContextMoniker Name="/CatalogosDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ef953f1e-5a59-4a96-93af-7a91226f4914" absoluteBounds="6.875, 1.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CatalogosDataContext/tbl_CAT_Estado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e061fdc-ba10-41d1-9177-ca5e46b2b604" absoluteBounds="6.89, 2.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a88ff74-ec6a-4722-9868-c91182493d96" absoluteBounds="4.375, 1.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CatalogosDataContext/tbl_CAT_Actividad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e5954d2-06e6-4170-aaa7-db235a5e05b3" absoluteBounds="4.39, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07ab0b01-3496-43d4-bdf1-6ec95f981c7f" absoluteBounds="6.75, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CatalogosDataContext/tbl_CAT_Localidades" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c980e19b-863a-461f-b3b2-3de3501dcb9f" absoluteBounds="6.765, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.8125 : 3.0112939453125); (7.8125 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CatalogosDataContext/tbl_CAT_Estado/tbl_CAT_Estado_tbl_CAT_Localidades" />
+      <nodes>
+        <classShapeMoniker Id="ef953f1e-5a59-4a96-93af-7a91226f4914" />
+        <classShapeMoniker Id="07ab0b01-3496-43d4-bdf1-6ec95f981c7f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0b425ff6-f849-46d2-b385-20441d6235df" absoluteBounds="4.375, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CatalogosDataContext/tbl_CAT_Moneda" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdb718ee-14ca-4b9d-b0b9-b8e05997c0b1" absoluteBounds="4.39, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="447d69ac-29ac-43df-8219-97b6a6f39710" isExpanded="false" absoluteBounds="2.125, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/CatalogosDataContext/tbl_CAT_Nacionalidad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6eef0a55-785e-4a4d-b947-2b7526e25ab7" absoluteBounds="2.14, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81f49b0e-82ba-4036-9f2e-955a99e516d5" isExpanded="false" absoluteBounds="2, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/CatalogosDataContext/tbl_CAT_TipoDomicilio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03d9e8e7-8f6d-4cbb-a160-3dcce840f13c" absoluteBounds="2.015, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7dda0733-f040-449d-a707-29ed167a2890" isExpanded="false" absoluteBounds="2, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/CatalogosDataContext/tbl_CAT_TipoPersona" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e57c696a-3d93-479d-8620-5c9e25f53cdc" absoluteBounds="2.015, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="834a7e6f-828e-481a-9461-27276c086c88" isExpanded="false" absoluteBounds="2.5, 5.625, 2, 0.45">
+      <DataClassMoniker Name="/CatalogosDataContext/tbl_CAT_EstuausSeguimiento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efe6e772-c007-48e6-aa3c-9c7bc03d3f3d" absoluteBounds="2.5149999999999997, 6.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6b1da5d-1526-428e-8e2f-b01d9204e640" isExpanded="false" absoluteBounds="4.625, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/CatalogosDataContext/tbl_CAT_TipoProducto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3726083b-0125-43ef-9fef-e5f14bb4db06" absoluteBounds="4.64, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

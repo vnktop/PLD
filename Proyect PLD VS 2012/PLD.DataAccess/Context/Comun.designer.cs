@@ -85,11 +85,11 @@ namespace PLD.DataAccess.Context
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.stp_CargaInformacion")]
-		public int stp_CargaInformacion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1000)")] ref string vchMensaje, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="SmallInt")] ref System.Nullable<short> sintError)
+		public int stp_CargaInformacion([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string vchUsuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(1000)")] ref string vchMensaje, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="SmallInt")] ref System.Nullable<short> sintError)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), vchMensaje, sintError);
-			vchMensaje = ((string)(result.GetParameterValue(0)));
-			sintError = ((System.Nullable<short>)(result.GetParameterValue(1)));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), vchUsuario, vchMensaje, sintError);
+			vchMensaje = ((string)(result.GetParameterValue(1)));
+			sintError = ((System.Nullable<short>)(result.GetParameterValue(2)));
 			return ((int)(result.ReturnValue));
 		}
 	}

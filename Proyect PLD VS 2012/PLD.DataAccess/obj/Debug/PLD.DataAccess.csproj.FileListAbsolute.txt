@@ -6,6 +6,14 @@ C:\Users\Administrador\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\b
 C:\Users\Administrador\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Administrador\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.dll
 C:\Users\Administrador\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.pdb
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.DataAccess.dll.config
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.DataAccess.dll
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.DataAccess.pdb
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.BusinessEntities.dll
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.BusinessEntities.pdb
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.dll
+C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.pdb
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.DataAccess.dll.config
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.DataAccess.dll
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.DataAccess.pdb
@@ -14,11 +22,3 @@ C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.dll
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.pdb
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.DataAccess.dll.config
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.DataAccess.dll
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.DataAccess.pdb
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.BusinessEntities.dll
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\bin\Debug\PLD.BusinessEntities.pdb
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.dll
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.pdb
-C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.DataAccess\obj\Debug\PLD.DataAccess.csprojResolveAssemblyReference.cache

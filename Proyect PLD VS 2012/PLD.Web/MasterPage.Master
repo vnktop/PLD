@@ -7,21 +7,119 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="App_Themes/PLDStyle.css" rel="stylesheet" />    
-    <!-- Bootstrap theme -->
 
+    <link href="App_Themes/PLDStyle.css" rel="stylesheet" />
+    <link href="~/App_Themes/JQuery/jquery-ui-1.8.14.custom.css" rel="stylesheet" />
+    <script src="../Scripts/JQuery/jquery-1.6.2.min.js"></script>
+    <script src="../Scripts/JQuery/jquery-ui.js"></script>
+    <script src="../Scripts/JQuery/ui.core.js"></script>
+
+
+    <link href="App_Themes/bootstrap.css" rel="stylesheet" />
+    <link href="App_Themes/bootswatch.min.css" rel="stylesheet" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="../" class="navbar-brand">SMART</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Compañias <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="themes">
+                                <li><a href="AdmonSitio/CrearCompania.aspx/">Insertar compañia</a></li>
+                                <li><a href="AdmonSitio/EliminarCompania.aspx">Inhabilitar compañía</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="A1">Perfiles <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="themes">
+                                <li><a href="AdmonSitio/CrearPerfil.aspx">Crear perfil</a></li>
+                                <li><a href="AdmonSitio/EliminarPerfil.aspx">Inhabilitar perfil</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Aplicaciones <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="download">
+                                <li><a href="AdmonSitio/AgregarAolicacion.aspx">Agregar aplicación</a></li>
+                                <li><a href="AdmonSitio/EliminarAplicacion.aspx">Eliminar aplicación</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="AdmonSitio/RelacionPerApli.aspx">Relación perfil - aplicación</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.aspx">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     <form id="form1" runat="server">
         <asp:ScriptManager runat="server" ID="ScriptManager_MasterPage" EnablePartialRendering="true">
         </asp:ScriptManager>
+
+        <asp:Table ID="Table3" runat="server" BackImageUrl="~/App_Images/fondoTop.jpg" Width="100%"
+            CellPadding="0" CellSpacing="0">
+
+            <asp:TableRow>
+                <asp:TableCell ColumnSpan="2" Height="97px">
+                    asas
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+
+      
+
+        <table width="100%">
+            <tr>
+                <td style="width: 20%"></td>
+                <td align="center">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td width="10%">&nbsp;
+                            </td>
+                            <td align="center" width="80%">
+                                <asp:Label ID="lblNomModulo" runat="server" CssClass="TitBot"></asp:Label>
+                            </td>
+                            <td width="10%">&nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 20%"></td>
+            </tr>
+        </table>
         <div class="Body">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+            <ProgressTemplate>
+                <div class="contCenter" style="width: 100%; height: 100%; position: absolute; top: 0; clear: left; background-image: url(~/App_Images/overlay.png)">
+                    <div class="updateProgress">
+                        <span class="updateProgressMessage">Procesando...</span>
+                        <asp:Image ID="idLoading" runat="server" ImageUrl="~/App_Images/process.gif" />
+                    </div>
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+
+
+
+
     </form>
 </body>
 </html>

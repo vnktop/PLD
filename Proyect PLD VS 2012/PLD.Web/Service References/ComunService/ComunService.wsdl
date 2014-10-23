@@ -16,6 +16,7 @@
       <xsd:import schemaLocation="http://localhost:1100/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Comun" />
       <xsd:import schemaLocation="http://localhost:1100/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities" />
       <xsd:import schemaLocation="http://localhost:1100/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PLD.BussinesEntities.Comun" />
+      <xsd:import schemaLocation="http://localhost:1100/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/PLD.BusinessEntities.Catalogo" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IComunContract_setLogError_InputMessage">
@@ -36,6 +37,66 @@
   <wsdl:message name="IComunContract_getBitacoraCarga_OutputMessage">
     <wsdl:part name="parameters" element="tns:getBitacoraCargaResponse" />
   </wsdl:message>
+  <wsdl:message name="IComunContract_setCatalogos_InputMessage">
+    <wsdl:part name="parameters" element="tns:setCatalogos" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_setCatalogos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setCatalogosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEstado" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getLocalidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLocalidad" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getLocalidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLocalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getActividad_InputMessage">
+    <wsdl:part name="parameters" element="tns:getActividad" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getActividad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getActividadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getNacionalidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNacionalidad" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getNacionalidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNacionalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getTipoPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTipoPersona" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getTipoPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTipoPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getRiesgo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRiesgo" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getRiesgo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRiesgoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getEstatusSeguimientoOp_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEstatusSeguimientoOp" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getEstatusSeguimientoOp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEstatusSeguimientoOpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getConfigInusual_InputMessage">
+    <wsdl:part name="parameters" element="tns:getConfigInusual" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getConfigInusual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getConfigInusualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getProductos_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductos" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_getProductos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductosResponse" />
+  </wsdl:message>
   <wsdl:portType name="IComunContract">
     <wsdl:operation name="setLogError">
       <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/setLogError" message="tns:IComunContract_setLogError_InputMessage" />
@@ -48,6 +109,46 @@
     <wsdl:operation name="getBitacoraCarga">
       <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getBitacoraCarga" message="tns:IComunContract_getBitacoraCarga_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getBitacoraCargaResponse" message="tns:IComunContract_getBitacoraCarga_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setCatalogos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/setCatalogos" message="tns:IComunContract_setCatalogos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/setCatalogosResponse" message="tns:IComunContract_setCatalogos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getEstado" message="tns:IComunContract_getEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getEstadoResponse" message="tns:IComunContract_getEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLocalidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getLocalidad" message="tns:IComunContract_getLocalidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getLocalidadResponse" message="tns:IComunContract_getLocalidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getActividad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getActividad" message="tns:IComunContract_getActividad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getActividadResponse" message="tns:IComunContract_getActividad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNacionalidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getNacionalidad" message="tns:IComunContract_getNacionalidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getNacionalidadResponse" message="tns:IComunContract_getNacionalidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTipoPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getTipoPersona" message="tns:IComunContract_getTipoPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getTipoPersonaResponse" message="tns:IComunContract_getTipoPersona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRiesgo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getRiesgo" message="tns:IComunContract_getRiesgo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getRiesgoResponse" message="tns:IComunContract_getRiesgo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEstatusSeguimientoOp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getEstatusSeguimientoOp" message="tns:IComunContract_getEstatusSeguimientoOp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getEstatusSeguimientoOpResponse" message="tns:IComunContract_getEstatusSeguimientoOp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getConfigInusual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getConfigInusual" message="tns:IComunContract_getConfigInusual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getConfigInusualResponse" message="tns:IComunContract_getConfigInusual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getProductos" message="tns:IComunContract_getProductos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getProductosResponse" message="tns:IComunContract_getProductos_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IComunContract" type="tns:IComunContract">
@@ -80,12 +181,102 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="setCatalogos">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/setCatalogos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEstado">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/getEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLocalidad">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/getLocalidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActividad">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/getActividad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNacionalidad">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/getNacionalidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTipoPersona">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/getTipoPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRiesgo">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/getRiesgo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEstatusSeguimientoOp">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/getEstatusSeguimientoOp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConfigInusual">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/getConfigInusual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductos">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/getProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="ComunService">
     <wsdl:port name="NetTcpBinding_IComunContract" binding="tns:NetTcpBinding_IComunContract">
-      <soap12:address location="net.tcp://localhost:1290/ComunService" />
+      <soap12:address location="net.tcp://localhost:1190/ComunService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://localhost:1290/ComunService</wsa10:Address>
+        <wsa10:Address>net.tcp://localhost:1190/ComunService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

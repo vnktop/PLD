@@ -42,7 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogo\CatalogoDA.cs" />
+    <Compile Include="Cliente\ClienteDA.cs" />
+    <Compile Include="Comun\ConfigDA.cs" />
     <Compile Include="Comun\LogsDA.cs" />
+    <Compile Include="Context\Catalogos.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Catalogos.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Context\Cliente.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cliente.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Context\Comun.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -55,6 +68,7 @@
       <DependentUpon>ContextTest.dbml</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
+    <Compile Include="Producto\ProductoDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -64,6 +78,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Context\Catalogos.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Catalogos.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Context\Cliente.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Cliente.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Context\Comun.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>Comun.designer.cs</LastGenOutput>
@@ -97,6 +121,16 @@
       <Project>{45bd1243-70d5-412b-a107-2283e62d637f}</Project>
       <Name>PLD.BusinessEntities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Context\Cliente.dbml.layout">
+      <DependentUpon>Cliente.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Context\Catalogos.dbml.layout">
+      <DependentUpon>Catalogos.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

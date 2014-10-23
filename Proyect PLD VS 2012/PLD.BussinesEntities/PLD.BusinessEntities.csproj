@@ -42,10 +42,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BE_Test.cs" />
+    <Compile Include="Catalogo\CatalogoRequest.cs" />
+    <Compile Include="Cliente\ClienteRequest.cs" />
+    <Compile Include="Cliente\ClienteResponse.cs" />
+    <Compile Include="Cliente\DatosGralesResponse.cs" />
+    <Compile Include="Cliente\CalificacionResponse.cs" />
+    <Compile Include="Cliente\DomicilioResponse.cs" />
     <Compile Include="Comun\Carga.cs" />
+    <Compile Include="Comun\CatalogoResponse.cs" />
     <Compile Include="Comun\LogError.cs" />
     <Compile Include="Comun\ServiceResult.cs" />
+    <Compile Include="Comun\TipoInusual.cs" />
     <Compile Include="Log\Nevegacion.cs" />
+    <Compile Include="Producto\ConsultaRequest.cs" />
+    <Compile Include="Producto\DetalleSeguimientoRequest.cs" />
+    <Compile Include="Producto\DetSeguimientoResponse.cs" />
+    <Compile Include="Producto\InusualesRequest.cs" />
+    <Compile Include="Producto\InusualResponse.cs" />
+    <Compile Include="Producto\InusualSeguimientoResponse.cs" />
+    <Compile Include="Producto\MovimietoResponse.cs" />
+    <Compile Include="Producto\ProductoResponse.cs" />
+    <Compile Include="Producto\ReporteResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

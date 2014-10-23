@@ -18,6 +18,9 @@ namespace PLD.UserControl.Comun
 {
     public partial class Mensaje : System.Web.UI.UserControl
     {
+
+      
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -65,6 +68,7 @@ namespace PLD.UserControl.Comun
             catch (Exception ex)
             {
                 StackTrace st = new StackTrace(true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Error", "alert('1');",true);
                 //clsLogging.registrarError(ex.Message, st, Session["User"].ToString());
                 //wucMensajeSisLog.setMensaje(ex.Message, 2);
             }
