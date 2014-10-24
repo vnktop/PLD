@@ -28,7 +28,6 @@
                             <asp:HiddenField ID="intProductoID" runat="server" Value='<%#Bind("intProductoID") %>'></asp:HiddenField>
                         </ItemTemplate>
                     </asp:TemplateField>
-
                 </Columns>
                 <PagerTemplate>
                     <asp:Label ID="lblTemplate" runat="server" Text="Muestra Filas:" />
