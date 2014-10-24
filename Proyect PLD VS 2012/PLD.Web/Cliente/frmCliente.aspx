@@ -22,18 +22,16 @@
         <script language="javascript" type="text/javascript">
             function CambiaTab() {
                 //$find('tabBeneficiario').set_activeTabIndex(1);
-                
+                 // cambio
                 // if ($find('tabContenedor').get_activeTabIndex() > 0) {
                 var ctrl = $find('ContentPlaceHolder1_tabConteinerCliente');
                 ctrl.set_activeTab(ctrl.get_tabs()[4]);
-                   
-
                 //}
               
             }
     </script>
 
-    <input id="brnPrueba" type="button" value="Preuba" onclick="javascript: CambiaTab();" />
+
     <div style="text-align: center; width: 100%;">
 
         <table>
