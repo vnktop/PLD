@@ -62,16 +62,18 @@ namespace PLD.DataAccess.Comun
             {
                 using (ClientesDataContext dc = new ClientesDataContext(Helper.ConnectionString()))
                 {
-                    tbl_CAT_ConfigInusual tbl = new tbl_CAT_ConfigInusual() { 
+                    tbl_CAT_ConfigInusual tbl = new tbl_CAT_ConfigInusual()
+                    {
                         sintConfigInusualID = item.sintConfigInusualID,
                         bitMontos = item.blMontos,
                         bitSaldoMensual = item.blSaldoMensual,
                         decMontoMayor = item.decMontoMayor,
-                        sintDiasAgrupacion= item.shDiasAgrupacion,
+                        sintDiasAgrupacion = item.shDiasAgrupacion,
 
                     };
-                   
-                  // dc.tbl_CAT_ConfigInusual
+
+                    dc.tbl_CAT_ConfigInusual.InsertOnSubmit(tbl);
+                    dc.SubmitChanges();
                 }
 
             }
@@ -81,5 +83,32 @@ namespace PLD.DataAccess.Comun
             }
             return result;
         }
+
+        public ServiceResult setDetTipoInusual(DetTipoInusual item)
+        {
+            ServiceResult result = new ServiceResult();
+            try
+            {
+                using (ClientesDataContext dc = new ClientesDataContext(Helper.ConnectionString()))
+                {
+                    tbl_DET_TipoInisual tbl = new tbl_DET_TipoInisual()
+                    {
+                        sintDetTipoInusualID = item.sintDetTipoInusualID,
+                        sintConfigInusualID = item.sintConfigInusualID,
+                        sintTipoInusual = item.sintTipoInusualID,
+                        sintTipoProductoID = item.sintTipoProductoID
+                    };
+                    dc.tbl_DET_TipoInisual.InsertOnSubmit(tbl);
+                    dc.SubmitChanges();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+
     }
 }

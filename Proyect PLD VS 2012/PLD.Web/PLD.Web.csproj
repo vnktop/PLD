@@ -471,7 +471,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1462</DevelopmentServerPort>
+          <DevelopmentServerPort>1702</DevelopmentServerPort>
           <DevelopmentServerVPath>/PLD</DevelopmentServerVPath>
           <IISUrl>http://localhost:48776/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

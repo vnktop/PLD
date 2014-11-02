@@ -821,6 +821,9 @@ namespace PLD.Web.ComunService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private short sintConfigInusualIDField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private short sintDetTipoInusualIDField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -935,6 +938,19 @@ namespace PLD.Web.ComunService {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public short sintDetTipoInusualID {
+            get {
+                return this.sintDetTipoInusualIDField;
+            }
+            set {
+                if ((this.sintDetTipoInusualIDField.Equals(value) != true)) {
+                    this.sintDetTipoInusualIDField = value;
+                    this.RaisePropertyChanged("sintDetTipoInusualID");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1026,6 +1042,18 @@ namespace PLD.Web.ComunService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/getProductos", ReplyAction="http://tempuri.org/IComunContract/getProductosResponse")]
         System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getProductosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/setConfigInusual", ReplyAction="http://tempuri.org/IComunContract/setConfigInusualResponse")]
+        PLD.Web.ComunService.ServiceResult setConfigInusual(PLD.Web.ComunService.ConfigInusual item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/setConfigInusual", ReplyAction="http://tempuri.org/IComunContract/setConfigInusualResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setConfigInusualAsync(PLD.Web.ComunService.ConfigInusual item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/setDetTipoInusual", ReplyAction="http://tempuri.org/IComunContract/setDetTipoInusualResponse")]
+        PLD.Web.ComunService.ServiceResult setDetTipoInusual(PLD.Web.ComunService.DetTipoInusual item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IComunContract/setDetTipoInusual", ReplyAction="http://tempuri.org/IComunContract/setDetTipoInusualResponse")]
+        System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setDetTipoInusualAsync(PLD.Web.ComunService.DetTipoInusual item);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1157,6 +1185,22 @@ namespace PLD.Web.ComunService {
         
         public System.Threading.Tasks.Task<PLD.Web.ComunService.CatalogoResponse[]> getProductosAsync() {
             return base.Channel.getProductosAsync();
+        }
+        
+        public PLD.Web.ComunService.ServiceResult setConfigInusual(PLD.Web.ComunService.ConfigInusual item) {
+            return base.Channel.setConfigInusual(item);
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setConfigInusualAsync(PLD.Web.ComunService.ConfigInusual item) {
+            return base.Channel.setConfigInusualAsync(item);
+        }
+        
+        public PLD.Web.ComunService.ServiceResult setDetTipoInusual(PLD.Web.ComunService.DetTipoInusual item) {
+            return base.Channel.setDetTipoInusual(item);
+        }
+        
+        public System.Threading.Tasks.Task<PLD.Web.ComunService.ServiceResult> setDetTipoInusualAsync(PLD.Web.ComunService.DetTipoInusual item) {
+            return base.Channel.setDetTipoInusualAsync(item);
         }
     }
 }

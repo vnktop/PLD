@@ -46,23 +46,19 @@ namespace PLD.Web.Procesos
                     short? sintTipoInusualID = short.Parse(row.Cells[0].Text);
                     List<DetTipoInusual> lst = new List<DetTipoInusual>();
                     var lstDe = ((TipoInusual[])ViewState["lsConfInusu"]).Select(a => a.lstDetTipoInusual.Where(b => b.sintTipoInusualID == sintTipoInusualID)).ToList();
-                    DetTipoInusual dtTipoInusu;
-                    foreach (var item in lstDe)
-                    {
-                        dtTipoInusu = new DetTipoInusual();
-                        dtTipoInusu = item.FirstOrDefault();
-                        if (dtTipoInusu != null)
-                            lst.Add(dtTipoInusu);
-                    }
+
+                    // lst = 
                     hdnSintInusualID.Value = sintTipoInusualID.ToString();
-                    grvDetTipoInusual.DataSource = lst;
+                    grvDetTipoInusual.DataSource = lstDe.FirstOrDefault();
                     grvDetTipoInusual.DataBind();
                     UPD_grvDetTipoInusual.Update();
 
                 }
                 else if (e.CommandName == "IrDetalleConfig")
                 {
+
                     short sintConfigInusualID = short.Parse(((HiddenField)row.FindControl("sintConfigInusualID")).Value);
+                    hdnDetTipoInusualID.Value = ((HiddenField)row.FindControl("sintDetTipoInusualID_HDF")).Value;
 
                     var entConfig = ((TipoInusual[])ViewState["lsConfInusu"]).Select(a => a.lstDetTipoInusual.Where(b => b.sintConfigInusualID == sintConfigInusualID).Select(c => c.entConfigInusual)).FirstOrDefault();
 
@@ -95,6 +91,8 @@ namespace PLD.Web.Procesos
                 short shPorc;
                 short.TryParse(txtPorcentajeSaldoMens.Text, out shPorc);
                 config.shPorcSaldoMens = shPorc;
+                config.sintDetTipoInusualID = short.Parse(hdnDetTipoInusualID.Value);
+                WS_Comun.setConfigInusual(config);
 
             }
             catch (Exception ex)
@@ -120,6 +118,8 @@ namespace PLD.Web.Procesos
                 }
                 grvConfig.DataSource = lst;
                 grvConfig.DataBind();
+
+
             }
             catch (Exception ex)
             {
@@ -129,7 +129,8 @@ namespace PLD.Web.Procesos
         }
 
         protected void btnGuardarDetInusual_Click(object sender, EventArgs e)
-        {
+        {   
+            
             short shInusual;
             short.TryParse(hdnSintInusualID.Value, out shInusual);
             DetTipoInusual det = new DetTipoInusual();
@@ -143,6 +144,19 @@ namespace PLD.Web.Procesos
                     det.sintConfigInusualID = short.Parse(item.Cells[0].Text);
             }
 
+            WS_Comun.setDetTipoInusual(det);
+        }
+
+        protected void btnNewConfig_Click(object sender, EventArgs e)
+        {
+
+            hdnConfigID.Value = "0";
+            rdBtnAgrupacion.SelectedValue = "0";
+            rdBtnListSaldoMensual.SelectedValue = "0";
+            rdBtnMontos.SelectedValue = "0";
+            txtMontoPermitido.Text = "0";
+            txtPorcentajeSaldoMens.Text = "0";
+            UPD_Config.Update();
         }
     }
 }

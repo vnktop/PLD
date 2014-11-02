@@ -26,6 +26,7 @@ C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstal
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\obj\x86\Debug\PLD.TesHostInstall.csprojResolveAssemblyReference.cache
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\obj\x86\Debug\PLD.TesHostInstall.exe
 C:\Users\efren.mendez\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\obj\x86\Debug\PLD.TesHostInstall.pdb
+C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\obj\x86\Debug\PLD.TesHostInstall.csprojResolveAssemblyReference.cache
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\bin\Debug\PLD.TesHostInstall.exe.config
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\bin\Debug\PLD.TesHostInstall.exe
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\bin\Debug\PLD.TesHostInstall.pdb
@@ -37,6 +38,5 @@ C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\bin\D
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\bin\Debug\PLD.BusinessEntities.pdb
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\bin\Debug\PLD.Logic.pdb
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\bin\Debug\PLD.DataAccess.pdb
-C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\obj\x86\Debug\PLD.TesHostInstall.csprojResolveAssemblyReference.cache
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\obj\x86\Debug\PLD.TesHostInstall.exe
 C:\Users\Efren\Documents\GitHub\PLD\Proyect PLD VS 2012\PLD.TesHostInstall\obj\x86\Debug\PLD.TesHostInstall.pdb

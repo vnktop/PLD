@@ -67,6 +67,7 @@
       <xs:element minOccurs="0" name="shDiasAgrupacion" nillable="true" type="xs:short" />
       <xs:element minOccurs="0" name="shPorcSaldoMens" nillable="true" type="xs:short" />
       <xs:element minOccurs="0" name="sintConfigInusualID" type="xs:short" />
+      <xs:element minOccurs="0" name="sintDetTipoInusualID" type="xs:short" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ConfigInusual" nillable="true" type="tns:ConfigInusual" />

@@ -97,6 +97,18 @@
   <wsdl:message name="IComunContract_getProductos_OutputMessage">
     <wsdl:part name="parameters" element="tns:getProductosResponse" />
   </wsdl:message>
+  <wsdl:message name="IComunContract_setConfigInusual_InputMessage">
+    <wsdl:part name="parameters" element="tns:setConfigInusual" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_setConfigInusual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setConfigInusualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_setDetTipoInusual_InputMessage">
+    <wsdl:part name="parameters" element="tns:setDetTipoInusual" />
+  </wsdl:message>
+  <wsdl:message name="IComunContract_setDetTipoInusual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setDetTipoInusualResponse" />
+  </wsdl:message>
   <wsdl:portType name="IComunContract">
     <wsdl:operation name="setLogError">
       <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/setLogError" message="tns:IComunContract_setLogError_InputMessage" />
@@ -149,6 +161,14 @@
     <wsdl:operation name="getProductos">
       <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/getProductos" message="tns:IComunContract_getProductos_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/getProductosResponse" message="tns:IComunContract_getProductos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setConfigInusual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/setConfigInusual" message="tns:IComunContract_setConfigInusual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/setConfigInusualResponse" message="tns:IComunContract_setConfigInusual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setDetTipoInusual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComunContract/setDetTipoInusual" message="tns:IComunContract_setDetTipoInusual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComunContract/setDetTipoInusualResponse" message="tns:IComunContract_setDetTipoInusual_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IComunContract" type="tns:IComunContract">
@@ -264,6 +284,24 @@
     </wsdl:operation>
     <wsdl:operation name="getProductos">
       <soap12:operation soapAction="http://tempuri.org/IComunContract/getProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setConfigInusual">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/setConfigInusual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setDetTipoInusual">
+      <soap12:operation soapAction="http://tempuri.org/IComunContract/setDetTipoInusual" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

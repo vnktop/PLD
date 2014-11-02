@@ -40,5 +40,9 @@ namespace PLD.Services
         List<TipoInusual> getConfigInusual();
         [OperationContract]
         List<CatalogoResponse> getProductos();
+        [OperationContract]
+        ServiceResult setConfigInusual(ConfigInusual item);
+        [OperationContract]
+        ServiceResult setDetTipoInusual(DetTipoInusual item);
     }
 }

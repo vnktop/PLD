@@ -278,5 +278,48 @@ namespace PLD.Services
             }
             return result;
         }
+
+
+
+        public ServiceResult setConfigInusual(ConfigInusual item)
+        {
+            ServiceResult result = new ServiceResult();
+            try
+            {
+                result = (new Config()).setConfigInusual(item);
+            }
+            catch (Exception ex)
+            {
+#if(DEBUG)
+                Console.WriteLine("Error en ComunService.setConfigInusual: " + ex.Message);
+#else
+                    EventLogManager.LogErrorEntry("Error en ComunService.setConfigInusual: " + ex.Message);
+                    //TODO: Codificar envío de notificación de error al EventLog
+#endif
+            }
+            return result;
+        }
+
+
+
+        public ServiceResult setDetTipoInusual(DetTipoInusual item)
+        {
+            ServiceResult result = new ServiceResult();
+            try
+            {
+                result = (new Config()).setDetTipoInusual(item);
+            }
+            catch (Exception ex)
+            {
+#if(DEBUG)
+                Console.WriteLine("Error en ComunService.setDetTipoInusual: " + ex.Message);
+#else
+                    EventLogManager.LogErrorEntry("Error en ComunService.setDetTipoInusual: " + ex.Message);
+                    //TODO: Codificar envío de notificación de error al EventLog
+#endif
+            }
+            return result;
+        }
+
     }
 }

@@ -69,6 +69,7 @@ namespace PLD.BusinessEntities.Comun
             blAgrupacion = false;
             shDiasAgrupacion = 0;
             decMontoAgrupacion = 0;
+            sintDetTipoInusualID = 0;
         }
         [DataMember]
         public short sintConfigInusualID { get; set; }
@@ -86,5 +87,7 @@ namespace PLD.BusinessEntities.Comun
         public short? shDiasAgrupacion { get; set; }
         [DataMember]
         public decimal? decMontoAgrupacion { get; set; }
+        [DataMember]
+        public short sintDetTipoInusualID { get; set; }
     }
 }

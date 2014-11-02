@@ -85,6 +85,15 @@ namespace PLD.Web.Procesos {
         protected global::System.Web.UI.WebControls.DropDownList ddlTipoProducto;
         
         /// <summary>
+        /// Control btnNewConfig.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNewConfig;
+        
+        /// <summary>
         /// Control grvConfig.
         /// </summary>
         /// <remarks>
@@ -119,6 +128,15 @@ namespace PLD.Web.Procesos {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnConfigID;
+        
+        /// <summary>
+        /// Control hdnDetTipoInusualID.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnDetTipoInusualID;
         
         /// <summary>
         /// Control rdBtnListSaldoMensual.

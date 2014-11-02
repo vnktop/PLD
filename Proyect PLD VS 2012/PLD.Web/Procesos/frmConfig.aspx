@@ -58,6 +58,7 @@
                                     <ItemTemplate>
                                         <asp:ImageButton ID="btnDetDetalleCong" CommandName="IrDetalleConfig" runat="server" ImageUrl="~/App_Images/detalle.png" BorderStyle="Outset"></asp:ImageButton>
                                         <asp:HiddenField ID="sintConfigInusualID" runat="server" Value='<%#Bind("sintConfigInusualID") %>'></asp:HiddenField>
+                                        <asp:HiddenField ID="sintDetTipoInusualID_HDF" runat="server" Value='<%#Bind("sintDetTipoInusualID") %>'></asp:HiddenField>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
@@ -82,6 +83,7 @@
                                 <td class="th">Configuraciones
                                 </td>
                                 <td>
+                                    <asp:Button runat="server" ID="btnNewConfig" Text="Nueva Configuracion" OnClick="btnNewConfig_Click" CssClass="ui-button" />
                                     <asp:GridView runat="server" ID="grvConfig" AllowPaging="false" Font-Size="7" EmptyDataText="Sin Detalle" AutoGenerateColumns="false" OnRowCommand="grvCatInusual_RowCommand">
                                         <AlternatingRowStyle CssClass="alternatingrowstyle" />
                                         <HeaderStyle CssClass="headerstyle" />
@@ -129,6 +131,7 @@
     <asp:UpdatePanel runat="server" ID="UPD_Config" UpdateMode="Conditional">
         <ContentTemplate>
             <asp:HiddenField runat="server" ID="hdnConfigID" />
+            <asp:HiddenField runat="server" ID="hdnDetTipoInusualID" />
             <table>
                 <tr>
 
